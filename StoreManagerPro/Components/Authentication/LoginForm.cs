@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.Logging;
 using RestSharp;
+using StoreManagerPro.Properties;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace StoreManagerPro
 {
@@ -12,6 +16,7 @@ namespace StoreManagerPro
         {
             InitializeComponent();
             LoadSavedCredentials();
+            Icon = new Icon(@"..\..\Resources\Logo-Yody-Yellow-1024x878.ico");
         }
 
         private void LoadSavedCredentials()
@@ -65,6 +70,7 @@ namespace StoreManagerPro
                     Properties.Settings.Default.Save(); // Lưu vào cài đặt
 
                     // Chuyển sang màn hình chính (nếu cần)
+                    NavigateToMainPage();
                 }
                 else
                 {
@@ -79,19 +85,27 @@ namespace StoreManagerPro
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
-            NavigateToLoginForm();
+            NavigateToSignupForm();
         }
 
         //Chuyển trang 
-        private void NavigateToLoginForm()
+        private void NavigateToSignupForm()
         {
             // Initialize the Timer for fade-out
             fadeTimer = new Timer();
             fadeTimer.Interval = 10; // Faster updates for smoother fade
-            fadeTimer.Tick += FadeOut;
+            fadeTimer.Tick += FadeToSignup;
             fadeTimer.Start();
         }
-        private void FadeOut(object sender, EventArgs e)
+        private void NavigateToMainPage()
+        {
+            // Initialize the Timer for fade-out
+            fadeTimer = new Timer();
+            fadeTimer.Interval = 10; // Faster updates for smoother fade
+            fadeTimer.Tick += FadeToMainPage;
+            fadeTimer.Start();
+        }
+        private void FadeToSignup(object sender, EventArgs e)
         {
             if (this.Opacity > 0)
             {
@@ -107,7 +121,7 @@ namespace StoreManagerPro
 
                 // Open SignupForm
                 SignupForm signupForm = new SignupForm();
-                signupForm.StartPosition = FormStartPosition.Manual;
+                signupForm.StartPosition = FormStartPosition.CenterScreen;
                 signupForm.Location = this.Location;
                 signupForm.ShowDialog();  // Show the new form
 
@@ -119,9 +133,41 @@ namespace StoreManagerPro
                 Application.DoEvents(); // Allow UI to refresh and clear pending events
             }
         }
+        private void FadeToMainPage(object sender, EventArgs e)
+        {
+            if (this.Opacity > 0)
+            {
+                this.Opacity -= 0.1; // Faster fade with larger decrement
+            }
+            else
+            {
+                fadeTimer.Stop();
+                fadeTimer.Dispose();
 
+                // Hide the current form before opening the SignupForm
+                this.Hide();
 
+                // Open SignupForm
+                MainPage mainPage = new MainPage();
+                mainPage.StartPosition = FormStartPosition.CenterScreen;
+                mainPage.Location = this.Location;
+                mainPage.ShowDialog();  // Show the new form
 
+                // After showing the new form, dispose of the current form
+                this.Close(); // Close the form
+                this.Dispose(); // Dispose of the form's resources
 
+                // Ensure the old form is completely removed from memory and taskbar
+                Application.DoEvents(); // Allow UI to refresh and clear pending events
+            }
+        }
+        private void controlboxTurnOff_Click(object sender, EventArgs e)
+        {
+            if (!toggleRememberme.Checked)
+            {
+                Properties.Settings.Default.SavedUsername = string.Empty;
+                Properties.Settings.Default.Save();
+            }
+        }
     }
 }
