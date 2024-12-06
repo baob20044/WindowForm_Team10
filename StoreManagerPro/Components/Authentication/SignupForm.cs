@@ -78,7 +78,6 @@ namespace StoreManagerPro
                 else
                 {
                     lbError.Location = new Point(5, lbError.Location.Y);
-                    lbError.MaximumSize = new Size(500, 0);
                     lbError.Text = response.Content ?? "Sign up failed. Please check the details and try again.";
                     lbError.Visible = true;
                 }
@@ -130,6 +129,34 @@ namespace StoreManagerPro
 
                 // Ensure the old form is removed from memory and taskbar
                 Application.DoEvents(); // Force UI to update and remove the old form from taskbar
+            }
+        }
+
+        private void txtPassword_IconRightClick(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '\0')
+            {
+                txtPassword.PasswordChar = '*'; // Ẩn mật khẩu
+                txtPassword.IconRight = Image.FromFile("../../Resources/Closed_Eye.png"); // Biểu tượng nhắm mắt
+            }
+            else
+            {
+                txtPassword.PasswordChar = '\0'; // Hiển thị mật khẩu
+                txtPassword.IconRight = Image.FromFile("../../Resources/Eye.png"); // Biểu tượng mở mắt
+            }
+        }
+
+        private void txtConfirmPassword_IconRightClick(object sender, EventArgs e)
+        {
+            if (txtConfirmPassword.PasswordChar == '\0')
+            {
+                txtConfirmPassword.PasswordChar = '*'; // Ẩn mật khẩu
+                txtConfirmPassword.IconRight = Image.FromFile("../../Resources/Closed_Eye.png"); // Biểu tượng nhắm mắt
+            }
+            else
+            {
+                txtConfirmPassword.PasswordChar = '\0'; // Hiển thị mật khẩu
+                txtConfirmPassword.IconRight = Image.FromFile("../../Resources/Eye.png"); // Biểu tượng mở mắt
             }
         }
     }

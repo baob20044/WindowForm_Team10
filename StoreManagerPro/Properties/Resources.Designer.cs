@@ -103,6 +103,36 @@ namespace StoreManagerPro.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Closed_Eye {
+            get {
+                object obj = ResourceManager.GetObject("Closed_Eye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap digital_sale_banner_sign_template_30227_62 {
+            get {
+                object obj = ResourceManager.GetObject("digital-sale-banner-sign-template_30227-62", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Eye {
+            get {
+                object obj = ResourceManager.GetObject("Eye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_Yody_Yellow_1024x878 {
             get {
                 object obj = ResourceManager.GetObject("Logo-Yody-Yellow-1024x878", resourceCulture);

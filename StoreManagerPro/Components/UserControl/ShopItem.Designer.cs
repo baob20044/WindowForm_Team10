@@ -54,12 +54,12 @@
             this.lbPrice.AutoSize = true;
             this.lbPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrice.ForeColor = System.Drawing.Color.DimGray;
+            this.lbPrice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbPrice.Location = new System.Drawing.Point(117, 244);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(85, 35);
             this.lbPrice.TabIndex = 12;
             this.lbPrice.Text = "$Price";
-            this.lbPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pBImage
             // 
@@ -82,6 +82,7 @@
             this.Controls.Add(this.lbPrice);
             this.Controls.Add(this.pBImage);
             this.Controls.Add(this.lbName);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "ShopItem";
             this.Size = new System.Drawing.Size(324, 279);
             ((System.ComponentModel.ISupportInitialize)(this.pBImage)).EndInit();

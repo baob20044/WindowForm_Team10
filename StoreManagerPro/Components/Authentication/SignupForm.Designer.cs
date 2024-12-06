@@ -97,6 +97,7 @@
             this.guna2Transition1.SetDecoration(this.lbError, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lbError.ForeColor = System.Drawing.Color.Red;
             this.lbError.Location = new System.Drawing.Point(186, 135);
+            this.lbError.MaximumSize = new System.Drawing.Size(500, 0);
             this.lbError.Name = "lbError";
             this.lbError.Size = new System.Drawing.Size(89, 16);
             this.lbError.TabIndex = 19;
@@ -400,6 +401,7 @@
             this.txtConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
             this.txtConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtConfirmPassword.HoverState.Parent = this.txtConfirmPassword;
+            this.txtConfirmPassword.IconRight = ((System.Drawing.Image)(resources.GetObject("txtConfirmPassword.IconRight")));
             this.txtConfirmPassword.Location = new System.Drawing.Point(29, 293);
             this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
@@ -410,6 +412,7 @@
             this.txtConfirmPassword.ShadowDecoration.Parent = this.txtConfirmPassword;
             this.txtConfirmPassword.Size = new System.Drawing.Size(306, 43);
             this.txtConfirmPassword.TabIndex = 3;
+            this.txtConfirmPassword.IconRightClick += new System.EventHandler(this.txtConfirmPassword_IconRightClick);
             // 
             // txtPassword
             // 
@@ -429,6 +432,7 @@
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.HoverState.Parent = this.txtPassword;
+            this.txtPassword.IconRight = ((System.Drawing.Image)(resources.GetObject("txtPassword.IconRight")));
             this.txtPassword.Location = new System.Drawing.Point(29, 242);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
@@ -439,6 +443,7 @@
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
             this.txtPassword.Size = new System.Drawing.Size(306, 43);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.IconRightClick += new System.EventHandler(this.txtPassword_IconRightClick);
             // 
             // txtUsername
             // 
@@ -524,7 +529,7 @@
             // 
             this.guna2Transition1.SetDecoration(this.guna2PictureBox2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2PictureBox2.Image = global::StoreManagerPro.Properties.Resources.ao_khoac_nam_swm6005_bee_2;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(-111, -34);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(-129, -37);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
             this.guna2PictureBox2.Size = new System.Drawing.Size(523, 664);

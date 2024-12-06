@@ -13,12 +13,23 @@ namespace StoreManagerPro.Components
 {
     public partial class ShopItem : Bunifu.UI.WinForms.BunifuUserControl
     {
+        public event Action<int> OnShopItemClick; // Event to notify when the item is clicked
+
+        public int ProductId { get; } // Property to hold product ID
+
         public ShopItem(int productId)
         {
             InitializeComponent();
+            ProductId = productId;
             LoadProductData(productId);
-        }
 
+            // Attach a click event to the user control
+            this.Click += (s, e) => OnShopItemClick?.Invoke(ProductId);
+            foreach (Control control in this.Controls)
+            {
+                control.Click += (s, e) => OnShopItemClick?.Invoke(ProductId);
+            }
+        }
         private async void LoadProductData(int productId)
         {
             try
@@ -126,6 +137,11 @@ namespace StoreManagerPro.Components
         {
             get { return lbPrice.Text; }
             set { lbPrice.Text = value; }
+        }
+
+        private void lbName_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 
