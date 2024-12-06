@@ -155,4 +155,27 @@
         d2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAAAAL
 </value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="txtConfirmPassword.IconRight" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAT9JREFUSEvt
+        VV0RwjAYmwQkIAEHIAEJPLHCsbs6YBJwwCTgAByABBwMB/ClS0dXugHr3iB3udI2TdZfkj8Gx0ap2Wa5
+        3Bqm6dH+zlarKSX9oLUe0awU3juI/i30HPoZMqUWHBwybWOJcbTohogLb/BXzNJ0T6swRBQVYNkaJJ25
+        L45kTusKer2eBETxlFPJCDOL04tgGJ4ZYUKuXudQvDJCQqrLFhLF0V0uQG7yLijsS/Gj9RNDbz78aF2B
+        AfaGx+7PjWVZB2mlxmhgR4E2KfvemZxv3oX10rxpzqabAAu+X65BJ93lcYMwiarRXz+BCMzdkSfiIOVc
+        iNnZpUSJOtrtHWt8JILqgBDcI+0KpW6XsX4y2rRvwa9vmAGot7Tb2TTfqy5g+RDk/xHBJGTG01n4+l4Q
+        I+wB9mPOpp9CkjwAhULFh5FRKEAAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="txtPassword.IconRight" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAT9JREFUSEvt
+        VV0RwjAYmwQkIAEHIAEJPLHCsbs6YBJwwCTgAByABBwMB/ClS0dXugHr3iB3udI2TdZfkj8Gx0ap2Wa5
+        3Bqm6dH+zlarKSX9oLUe0awU3juI/i30HPoZMqUWHBwybWOJcbTohogLb/BXzNJ0T6swRBQVYNkaJJ25
+        L45kTusKer2eBETxlFPJCDOL04tgGJ4ZYUKuXudQvDJCQqrLFhLF0V0uQG7yLijsS/Gj9RNDbz78aF2B
+        AfaGx+7PjWVZB2mlxmhgR4E2KfvemZxv3oX10rxpzqabAAu+X65BJ93lcYMwiarRXz+BCMzdkSfiIOVc
+        iNnZpUSJOtrtHWt8JILqgBDcI+0KpW6XsX4y2rRvwa9vmAGot7Tb2TTfqy5g+RDk/xHBJGTG01n4+l4Q
+        I+wB9mPOpp9CkjwAhULFh5FRKEAAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

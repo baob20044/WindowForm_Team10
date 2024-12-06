@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using Microsoft.VisualBasic.Logging;
 using RestSharp;
@@ -167,6 +168,22 @@ namespace StoreManagerPro
             {
                 Properties.Settings.Default.SavedUsername = string.Empty;
                 Properties.Settings.Default.Save();
+            }
+           
+        }
+
+        //Show / Hide Password
+        private void txtPassword_IconRightClick(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '\0')
+            {
+                txtPassword.PasswordChar = '*'; // Ẩn mật khẩu
+                txtPassword.IconRight = Image.FromFile("../../Resources/Closed_Eye.png"); // Biểu tượng nhắm mắt
+            }
+            else
+            {
+                txtPassword.PasswordChar = '\0'; // Hiển thị mật khẩu
+                txtPassword.IconRight = Image.FromFile("../../Resources/Eye.png"); // Biểu tượng mở mắt
             }
         }
     }

@@ -50,3 +50,5 @@ D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\bin\Debug\Magick.NET-Q
 D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\bin\Debug\Magick.NET.Core.dll
 D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\bin\Debug\Magick.NET-Q8-AnyCPU.xml
 D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\bin\Debug\Magick.NET.Core.xml
+D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\obj\Debug\StoreManagerPro.ItemDetail.resources
+D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll

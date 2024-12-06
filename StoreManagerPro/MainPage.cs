@@ -31,16 +31,30 @@ namespace StoreManagerPro
             LoadPage(0);
         }
 
+        // Load toàn bộ ảnh và apply nút click cho ShopItem 
         private void InitializeShopItems()
         {
             shopItems = new List<ShopItem>();
 
             for (int i = 1; i <= totalProduct; i++) // Inclusive range to handle all products
             {
-                shopItems.Add(new ShopItem(i)); // Preload all shop items
+                var shopItem = new ShopItem(i);
+                shopItem.OnShopItemClick += HandleShopItemClick; // Subscribe to the click event
+                shopItems.Add(shopItem); // Add to the list
             }
         }
 
+        // Khi chọn product thì hiện sản phẩm
+        private void HandleShopItemClick(int productId)
+        {
+            // Navigate to the "Product" page and add the ItemDetail
+            pages.SetPage("Product");
+            ItemDetail detail = new ItemDetail(productId);
+            flowLayoutProduct.Controls.Clear(); // Clear existing details
+            flowLayoutProduct.Controls.Add(detail); // Add the new detail view
+        }
+
+        // Load trang gồm nhiều sản phảm để lựa chọn + load theo trang dung` filteredItems
         private void LoadPage(int pageIndex)
         {
             flowLayout.Controls.Clear(); // Clear existing controls
@@ -63,7 +77,7 @@ namespace StoreManagerPro
             lbPageNumber.Text = $"{currentPage + 1}/{totalPage}";
         }
 
-        // Event handler for Next button
+        // Trang sau
         private void btnNext_Click(object sender, EventArgs e)
         {
             if ((currentPage + 1) * pageSize < filteredItems.Count)
@@ -73,7 +87,7 @@ namespace StoreManagerPro
             }
         }
 
-        // Event handler for Previous button
+        // Trang trước 
         private void btnPrevious_Click(object sender, EventArgs e)
         {
             if (currentPage > 0)
@@ -83,7 +97,7 @@ namespace StoreManagerPro
             }
         }
 
-        // Event handler for Search box
+        // Chức năng tìm kiếm 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             string searchText = txtSearch.Text.ToLower();
@@ -98,7 +112,7 @@ namespace StoreManagerPro
             LoadPage(currentPage);
         }
 
-        // Event handler for the Side Menu button
+        // Chức năng chuyển trang
         private void btnSideMenu_Click(object sender, EventArgs e)
         {
             pages.SetPage(((Control)sender).Text);
