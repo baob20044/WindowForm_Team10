@@ -14,11 +14,13 @@ namespace StoreManagerPro
 {
     public partial class MainPage : Form
     {
+        private Timer fadeTimer; // Dùng cho chuyển trang
+
         private List<ShopItem> shopItems; // All items
         private List<ShopItem> filteredItems; // Filtered items based on search
         private int currentPage = 0;      // Current page index
         private int pageSize = 15;         // Number of items per page
-        private int totalProduct = 28;
+        private int totalProduct = 29;
 
         public MainPage()
         {
@@ -29,6 +31,7 @@ namespace StoreManagerPro
             InitializeShopItems();
             filteredItems = new List<ShopItem>(shopItems); // Initially, no filtering
             LoadPage(0);
+            UpdateCartTotals();
         }
 
         // Load toàn bộ ảnh và apply nút click cho ShopItem 
@@ -49,7 +52,7 @@ namespace StoreManagerPro
         {
             // Navigate to the "Product" page and add the ItemDetail
             pages.SetPage("Product");
-            ItemDetail detail = new ItemDetail(productId);
+            ItemDetail detail = new ItemDetail(productId,flowLayoutCart);
             flowLayoutProduct.Controls.Clear(); // Clear existing details
             flowLayoutProduct.Controls.Add(detail); // Add the new detail view
         }
@@ -117,10 +120,106 @@ namespace StoreManagerPro
         {
             pages.SetPage(((Control)sender).Text);
         }
+        public void ChangeToCartPage()
+        {
+            pages.SetPage("Cart"); // Change the page to the Cart page
+        }
 
         private void MainPage_Load(object sender, EventArgs e)
         {
             // This is already handled by the constructor
+        }
+
+        // Khi xóa cartItem trong mainpage, tự động cập nhật  
+        public void RemoveCartItem(CartItem cartItem)
+        {
+            // Remove the item from the cart
+            flowLayoutCart.Controls.Remove(cartItem);
+
+            // Update the cart totals after removing the item
+            UpdateCartTotals();
+        }
+        // Cập nhật giỏ hàng khi click thêm giỏ hàng hoặc mua ngay từ trang ItemDetail
+        public void UpdateCartTotals()
+        {
+            decimal totalMoney = 0;
+            decimal transportFee = 30000;  // Static transport fee (VND)
+            decimal discount = 0.20m;      // 20% discount
+
+            // Calculate the total money based on the items in the cart
+            foreach (Control control in flowLayoutCart.Controls)
+            {
+                if (control is CartItem cartItem)
+                {
+                    // For each CartItem, calculate the price and quantity
+                    decimal price = decimal.Parse(cartItem.ItemPrice.Replace(" VND", "").Replace(",", ""));
+                    decimal quantity = cartItem.NumericValue;
+                    totalMoney += price * quantity;
+                }
+            }
+
+            // If the cart is empty, set the totals to zero or default values
+            if (totalMoney == 0)
+            {
+                lbTotalMoney.Text = "0 VND";
+                lbDiscount.Text = "0%";
+                lbTransportFee.Text = $"0 VND";
+                lbTotalOrder.Text = $"0 VND"; // Final total with only transport fee
+            }
+            else
+            {
+                // Apply discount and add transport fee
+                decimal totalAfterDiscount = totalMoney * (1 - discount);
+                decimal finalTotal = totalAfterDiscount + transportFee;
+
+                // Update the labels on MainPage
+                lbTotalMoney.Text = $"{totalMoney:N0} VND"; // Total before discount
+                lbDiscount.Text = $"{discount * 100}%";     // Discount percentage
+                lbTransportFee.Text = $"{transportFee:N0} VND"; // Transport fee
+                lbTotalOrder.Text = $"{finalTotal:N0} VND"; // Final total after discount and transport fee
+            }
+        }
+
+
+        private void NavigateToLoginPage()
+        {
+            // Initialize the Timer for fade-out
+            fadeTimer = new Timer();
+            fadeTimer.Interval = 10; // Faster updates for smoother fade
+            fadeTimer.Tick += FadeToLogin;
+            fadeTimer.Start();
+        }
+        private void FadeToLogin(object sender, EventArgs e)
+        {
+            if (this.Opacity > 0)
+            {
+                this.Opacity -= 0.1; // Faster fade with larger decrement
+            }
+            else
+            {
+                fadeTimer.Stop();
+                fadeTimer.Dispose();
+
+                // Hide the current form before opening the SignupForm
+                this.Hide();
+
+                // Open SignupForm
+                LoginForm loginForm = new LoginForm();
+                loginForm.StartPosition = FormStartPosition.CenterScreen;
+                loginForm.Location = this.Location;
+                loginForm.ShowDialog();  // Show the new form
+
+                // After showing the new form, dispose of the current form
+                this.Close(); // Close the form
+                this.Dispose(); // Dispose of the form's resources
+
+                // Ensure the old form is completely removed from memory and taskbar
+                Application.DoEvents(); // Allow UI to refresh and clear pending events
+            }
+        }
+        private void lbLogout_Click(object sender, EventArgs e)
+        {
+            NavigateToLoginPage();
         }
     }
 }

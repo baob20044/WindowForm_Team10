@@ -79,6 +79,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch">
+      <HintPath>..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuUserControl">
       <HintPath>..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
     </Reference>
@@ -142,6 +145,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\UserControl\CartItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\UserControl\CartItem.Designer.cs">
+      <DependentUpon>CartItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\Authentication\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +185,9 @@
     </Compile>
     <EmbeddedResource Include="Components\Authentication\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\UserControl\CartItem.resx">
+      <DependentUpon>CartItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\UserControl\ItemDetail.resx">
       <DependentUpon>ItemDetail.cs</DependentUpon>

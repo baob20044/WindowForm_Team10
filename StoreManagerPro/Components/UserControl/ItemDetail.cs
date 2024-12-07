@@ -14,14 +14,19 @@ namespace StoreManagerPro
     public partial class ItemDetail : Bunifu.UI.WinForms.BunifuUserControl
     {
         private Dictionary<string, Color> colorMap; // Map color names to Color objects
-
-        public ItemDetail(int productId)
+        private int productId;  // Store productId for CartItem
+        private FlowLayoutPanel flowLayoutCart; // Reference to the parent's FlowLayoutPanel
+        public ItemDetail(int productId, FlowLayoutPanel flowLayoutCart)
         {
             InitializeComponent();
+            this.productId = productId;
+            this.flowLayoutCart = flowLayoutCart;
+
             LoadProductDetails(productId);
             DropdownColor.SelectedIndexChanged += DropdownColor_SelectedIndexChanged; // Attach event handler
         }
 
+        // API product theo productId 
         private async void LoadProductDetails(int productId)
         {
             try
@@ -45,12 +50,13 @@ namespace StoreManagerPro
             }
         }
 
+        // Cập nhật UI thanh toán khi thêm xóa sửa cartItem 
         private void UpdateUIWithProduct(Product product)
         {
             lbName.Text = product.name;
             lbPrice.Text = $"{product.price:N0} VND";
             lbDescription.Text = product.description ?? "No description available";
-            lbCost.Text = $"Cost: {product.price:N0} VND";
+            lbCost.Text = $"Cost: {product.price + product.price*10/100:N0} VND";
             lbInStock.Text = $"Còn {product.inStock} sản phẩm trong kho";
 
             // Populate colors
@@ -78,7 +84,7 @@ namespace StoreManagerPro
             }
         }
 
-
+        // Load ảnh sản phẩm theo màu chọn
         private async Task LoadProductImage(Color color)
         {
             var imageUrl = color?.images?.FirstOrDefault()?.url;
@@ -120,6 +126,7 @@ namespace StoreManagerPro
             pBProduct.Image = global::StoreManagerPro.Properties.Resources.cart; // Placeholder fallback image
         }
 
+        // Khi thay đổi dropdowncolor thì đổi cả label và đổi ảnh 
         private async void DropdownColor_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (DropdownColor.SelectedIndex >= 0)
@@ -139,13 +146,79 @@ namespace StoreManagerPro
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"{lbName.Text} added to cart!");
+            bool productExistsInCart = false;
+            string selectedColorName = DropdownColor.SelectedItem?.ToString();
+            string selectedSize = DropdownSize.SelectedItem?.ToString();
+            foreach (Control control in flowLayoutCart.Controls)
+            {
+                if (control is CartItem existingCartItem &&
+                    existingCartItem.ProductId == productId &&
+                    existingCartItem.SelectedColorName == selectedColorName &&
+                    existingCartItem.SelectedSize == selectedSize) // Compare color and size
+                {
+                    existingCartItem.NumericValue += NumericUpDown1.Value;
+                    productExistsInCart = true;
+                    break;
+                }
+            }
+
+            if (!productExistsInCart)
+            {
+                // Add new item to the cart with selected color and size
+                CartItem newCartItem = new CartItem(productId, selectedColorName, selectedSize)
+                {
+                    ItemLabel = lbName.Text,
+                    ItemPrice = lbPrice.Text,
+                    ProductImage = pBProduct.Image,
+                    NumericValue = NumericUpDown1.Value
+                };
+                flowLayoutCart.Controls.Add(newCartItem);
+            }
+
+            var mainPage = this.FindForm() as MainPage;
+            mainPage?.UpdateCartTotals();
+            MessageBox.Show($"Added {lbName.Text} to the cart.");
         }
+
+
 
         private void btnBuy_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Buying {lbName.Text}...");
+            bool productExistsInCart = false;
+            string selectedColorName = DropdownColor.SelectedItem?.ToString();
+            string selectedSize = DropdownSize.SelectedItem?.ToString();
+            foreach (Control control in flowLayoutCart.Controls)
+            {
+                if (control is CartItem existingCartItem &&
+                    existingCartItem.ProductId == productId &&
+                    existingCartItem.SelectedColorName == selectedColorName &&
+                    existingCartItem.SelectedSize == selectedSize) // Compare color and size
+                {
+                    existingCartItem.NumericValue += NumericUpDown1.Value;
+                    productExistsInCart = true;
+                    break;
+                }
+            }
+
+            if (!productExistsInCart)
+            {
+                // Add new item to the cart with selected color and size
+                CartItem newCartItem = new CartItem(productId, selectedColorName, selectedSize)
+                {
+                    ItemLabel = lbName.Text,
+                    ItemPrice = lbPrice.Text,
+                    ProductImage = pBProduct.Image,
+                    NumericValue = NumericUpDown1.Value
+                };
+                flowLayoutCart.Controls.Add(newCartItem);
+            }
+
+            var mainPage = this.FindForm() as MainPage;
+            mainPage?.UpdateCartTotals();
+            mainPage?.ChangeToCartPage();
         }
+
+
     }
 
     // Example Product Service Class (shared logic)
@@ -177,6 +250,7 @@ namespace StoreManagerPro
         public string subcategoryName { get; set; }
         public string description { get; set; }
         public decimal price { get; set; }
+        public decimal cost { get; set; }
         public int inStock { get; set; } // Add this line
         public List<Color> colors { get; set; }
         public List<Size> sizes { get; set; } 
