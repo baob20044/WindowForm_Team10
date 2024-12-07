@@ -88,12 +88,6 @@
     <Reference Include="Guna.UI2">
       <HintPath>..\GunaUI2-Cracked-2020-2021-main\Guna.UI2 WinForms\4.0\Guna.UI2.dll</HintPath>
     </Reference>
-    <Reference Include="Magick.NET-Q8-AnyCPU, Version=14.2.0.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=MSIL">
-      <HintPath>..\packages\Magick.NET-Q8-AnyCPU.14.2.0\lib\netstandard20\Magick.NET-Q8-AnyCPU.dll</HintPath>
-    </Reference>
-    <Reference Include="Magick.NET.Core, Version=14.2.0.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=MSIL">
-      <HintPath>..\packages\Magick.NET.Core.14.2.0\lib\netstandard20\Magick.NET.Core.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -145,6 +139,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\Authentication\ForgotPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\Authentication\ForgotPasswordForm.Designer.cs">
+      <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\UserControl\CartItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -183,6 +183,9 @@
     <Compile Include="Components\Authentication\SignupForm.Designer.cs">
       <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Components\Authentication\ForgotPasswordForm.resx">
+      <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\Authentication\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,11 +261,4 @@
     <PreBuildEvent>
     </PreBuildEvent>
   </PropertyGroup>
-  <Import Project="..\packages\Magick.NET-Q8-AnyCPU.14.2.0\build\netstandard20\Magick.NET-Q8-AnyCPU.targets" Condition="Exists('..\packages\Magick.NET-Q8-AnyCPU.14.2.0\build\netstandard20\Magick.NET-Q8-AnyCPU.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Magick.NET-Q8-AnyCPU.14.2.0\build\netstandard20\Magick.NET-Q8-AnyCPU.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Magick.NET-Q8-AnyCPU.14.2.0\build\netstandard20\Magick.NET-Q8-AnyCPU.targets'))" />
-  </Target>
 </Project>

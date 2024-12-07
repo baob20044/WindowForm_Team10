@@ -40,12 +40,12 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState4 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
-            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState5 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
-            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState6 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
             Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState1 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
             Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState2 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
             Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState3 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState4 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState5 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState6 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -97,26 +97,26 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.flowLayoutProduct = new System.Windows.Forms.FlowLayoutPanel();
-            this.ToggleSwitchDarkMode = new Bunifu.UI.WinForms.BunifuToggleSwitch();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.lbLogout = new System.Windows.Forms.Label();
+            this.pBLogout = new System.Windows.Forms.PictureBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.bunifuPictureBox3 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.bunifuDropdown1 = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.bunifuToggleSwitch1 = new Bunifu.UI.WinForms.BunifuToggleSwitch();
-            this.label15 = new System.Windows.Forms.Label();
-            this.bunifuDropdown1 = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.ToggleSwitchDarkMode = new Bunifu.UI.WinForms.BunifuToggleSwitch();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.bunifuPictureBox3 = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.pBLogout = new System.Windows.Forms.PictureBox();
-            this.lbLogout = new System.Windows.Forms.Label();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.flowLayoutProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -135,12 +135,12 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            this.tabPage7.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLogout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
+            this.tabPage7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -785,14 +785,14 @@
             this.pages.Location = new System.Drawing.Point(297, 0);
             this.pages.Multiline = true;
             this.pages.Name = "pages";
-            this.pages.Page = this.tabPage6;
-            this.pages.PageIndex = 5;
-            this.pages.PageName = "tabPage6";
-            this.pages.PageTitle = "Settings";
+            this.pages.Page = this.tabPage1;
+            this.pages.PageIndex = 0;
+            this.pages.PageName = "tabPage1";
+            this.pages.PageTitle = "Home";
             this.pages.SelectedIndex = 0;
             this.pages.Size = new System.Drawing.Size(1074, 965);
             this.pages.TabIndex = 13;
-            animation1.AnimateOnlyDifferences = false;
+            animation1.AnimateOnlyDifferences = true;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
             animation1.LeafCoeff = 0F;
             animation1.MaxTime = 1F;
@@ -800,7 +800,7 @@
             animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
             animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
             animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
             animation1.RotateCoeff = 0F;
             animation1.RotateLimit = 0F;
             animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
@@ -808,7 +808,7 @@
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.pages.Transition = animation1;
-            this.pages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
+            this.pages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.VertBlind;
             // 
             // tabPage1
             // 
@@ -823,7 +823,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1076, 936);
+            this.tabPage1.Size = new System.Drawing.Size(1066, 936);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Home";
             // 
@@ -969,7 +969,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1076, 936);
+            this.tabPage2.Size = new System.Drawing.Size(1066, 936);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Category";
             // 
@@ -979,7 +979,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1076, 936);
+            this.tabPage3.Size = new System.Drawing.Size(1066, 936);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Wallet";
             // 
@@ -1260,7 +1260,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1076, 936);
+            this.tabPage5.Size = new System.Drawing.Size(1066, 936);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "User Profile";
             // 
@@ -1284,89 +1284,189 @@
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Settings";
             // 
-            // tabPage7
+            // panel8
             // 
-            this.tabPage7.Controls.Add(this.flowLayoutProduct);
-            this.tabPage7.Location = new System.Drawing.Point(4, 4);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1076, 936);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "Product";
-            this.tabPage7.UseVisualStyleBackColor = true;
+            this.panel8.Controls.Add(this.lbLogout);
+            this.panel8.Controls.Add(this.pBLogout);
+            this.panel8.Controls.Add(this.label17);
+            this.panel8.Controls.Add(this.label16);
+            this.panel8.Controls.Add(this.label14);
+            this.panel8.Controls.Add(this.bunifuPictureBox3);
+            this.panel8.Controls.Add(this.bunifuPictureBox2);
+            this.panel8.Controls.Add(this.bunifuPictureBox1);
+            this.panel8.Location = new System.Drawing.Point(0, 270);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1070, 666);
+            this.panel8.TabIndex = 0;
             // 
-            // flowLayoutProduct
+            // lbLogout
             // 
-            this.flowLayoutProduct.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutProduct.Name = "flowLayoutProduct";
-            this.flowLayoutProduct.Size = new System.Drawing.Size(1063, 936);
-            this.flowLayoutProduct.TabIndex = 1;
+            this.lbLogout.AutoSize = true;
+            this.lbLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbLogout.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.lbLogout.Location = new System.Drawing.Point(915, 550);
+            this.lbLogout.Name = "lbLogout";
+            this.lbLogout.Size = new System.Drawing.Size(84, 28);
+            this.lbLogout.TabIndex = 22;
+            this.lbLogout.Text = "Log out";
+            this.lbLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbLogout.Click += new System.EventHandler(this.lbLogout_Click);
             // 
-            // ToggleSwitchDarkMode
+            // pBLogout
             // 
-            this.ToggleSwitchDarkMode.Animation = 5;
-            this.ToggleSwitchDarkMode.BackColor = System.Drawing.Color.Transparent;
-            this.ToggleSwitchDarkMode.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ToggleSwitchDarkMode.BackgroundImage")));
-            this.ToggleSwitchDarkMode.Checked = false;
-            this.ToggleSwitchDarkMode.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ToggleSwitchDarkMode.Enabled = false;
-            this.ToggleSwitchDarkMode.InnerCirclePadding = 3;
-            this.ToggleSwitchDarkMode.Location = new System.Drawing.Point(75, 105);
-            this.ToggleSwitchDarkMode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ToggleSwitchDarkMode.Name = "ToggleSwitchDarkMode";
-            this.ToggleSwitchDarkMode.Size = new System.Drawing.Size(63, 28);
-            this.ToggleSwitchDarkMode.TabIndex = 0;
-            this.ToggleSwitchDarkMode.ThumbMargin = 3;
-            toggleState4.BackColor = System.Drawing.Color.DarkGray;
-            toggleState4.BackColorInner = System.Drawing.Color.White;
-            toggleState4.BorderColor = System.Drawing.Color.DarkGray;
-            toggleState4.BorderColorInner = System.Drawing.Color.White;
-            toggleState4.BorderRadius = 17;
-            toggleState4.BorderRadiusInner = 11;
-            toggleState4.BorderThickness = 1;
-            toggleState4.BorderThicknessInner = 1;
-            this.ToggleSwitchDarkMode.ToggleStateDisabled = toggleState4;
-            toggleState5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            toggleState5.BackColorInner = System.Drawing.Color.White;
-            toggleState5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            toggleState5.BorderColorInner = System.Drawing.Color.White;
-            toggleState5.BorderRadius = 17;
-            toggleState5.BorderRadiusInner = 11;
-            toggleState5.BorderThickness = 1;
-            toggleState5.BorderThicknessInner = 1;
-            this.ToggleSwitchDarkMode.ToggleStateOff = toggleState5;
-            toggleState6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
-            toggleState6.BackColorInner = System.Drawing.Color.White;
-            toggleState6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
-            toggleState6.BorderColorInner = System.Drawing.Color.White;
-            toggleState6.BorderRadius = 17;
-            toggleState6.BorderRadiusInner = 11;
-            toggleState6.BorderThickness = 1;
-            toggleState6.BorderThicknessInner = 1;
-            this.ToggleSwitchDarkMode.ToggleStateOn = toggleState6;
-            this.ToggleSwitchDarkMode.Value = false;
+            this.pBLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pBLogout.Image = ((System.Drawing.Image)(resources.GetObject("pBLogout.Image")));
+            this.pBLogout.Location = new System.Drawing.Point(856, 515);
+            this.pBLogout.Name = "pBLogout";
+            this.pBLogout.Size = new System.Drawing.Size(63, 66);
+            this.pBLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBLogout.TabIndex = 19;
+            this.pBLogout.TabStop = false;
+            this.pBLogout.Click += new System.EventHandler(this.lbLogout_Click);
             // 
-            // label10
+            // label17
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(70, 64);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(178, 28);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Dark Theme Mode ";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(829, 264);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(130, 28);
+            this.label17.TabIndex = 21;
+            this.label17.Text = "Privacy Policy";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label11
+            // label16
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(155, 105);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(39, 28);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Off";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(485, 264);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(119, 28);
+            this.label16.TabIndex = 20;
+            this.label16.Text = "Terms of use";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(132, 264);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(91, 28);
+            this.label14.TabIndex = 19;
+            this.label14.Text = "About us";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuPictureBox3
+            // 
+            this.bunifuPictureBox3.AllowFocused = false;
+            this.bunifuPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox3.AutoSizeHeight = true;
+            this.bunifuPictureBox3.BorderRadius = 0;
+            this.bunifuPictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuPictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox3.Image")));
+            this.bunifuPictureBox3.IsCircle = true;
+            this.bunifuPictureBox3.Location = new System.Drawing.Point(785, 37);
+            this.bunifuPictureBox3.Name = "bunifuPictureBox3";
+            this.bunifuPictureBox3.Size = new System.Drawing.Size(221, 221);
+            this.bunifuPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox3.TabIndex = 2;
+            this.bunifuPictureBox3.TabStop = false;
+            this.bunifuPictureBox3.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            // 
+            // bunifuPictureBox2
+            // 
+            this.bunifuPictureBox2.AllowFocused = false;
+            this.bunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox2.AutoSizeHeight = true;
+            this.bunifuPictureBox2.BorderRadius = 0;
+            this.bunifuPictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox2.Image")));
+            this.bunifuPictureBox2.IsCircle = true;
+            this.bunifuPictureBox2.Location = new System.Drawing.Point(442, 37);
+            this.bunifuPictureBox2.Name = "bunifuPictureBox2";
+            this.bunifuPictureBox2.Size = new System.Drawing.Size(223, 223);
+            this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox2.TabIndex = 1;
+            this.bunifuPictureBox2.TabStop = false;
+            this.bunifuPictureBox2.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            // 
+            // bunifuPictureBox1
+            // 
+            this.bunifuPictureBox1.AllowFocused = false;
+            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox1.AutoSizeHeight = true;
+            this.bunifuPictureBox1.BorderRadius = 0;
+            this.bunifuPictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
+            this.bunifuPictureBox1.IsCircle = true;
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(75, 37);
+            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(221, 221);
+            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox1.TabIndex = 0;
+            this.bunifuPictureBox1.TabStop = false;
+            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            // 
+            // bunifuDropdown1
+            // 
+            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDropdown1.BackgroundColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuDropdown1.BorderRadius = 1;
+            this.bunifuDropdown1.Color = System.Drawing.Color.Silver;
+            this.bunifuDropdown1.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.bunifuDropdown1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.bunifuDropdown1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.bunifuDropdown1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.bunifuDropdown1.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.bunifuDropdown1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.bunifuDropdown1.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.bunifuDropdown1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bunifuDropdown1.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.bunifuDropdown1.FillDropDown = true;
+            this.bunifuDropdown1.FillIndicator = false;
+            this.bunifuDropdown1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bunifuDropdown1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdown1.FormattingEnabled = true;
+            this.bunifuDropdown1.Icon = null;
+            this.bunifuDropdown1.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.bunifuDropdown1.IndicatorColor = System.Drawing.Color.Gray;
+            this.bunifuDropdown1.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.bunifuDropdown1.ItemBackColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.ItemBorderColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.ItemForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdown1.ItemHeight = 26;
+            this.bunifuDropdown1.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuDropdown1.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.Items.AddRange(new object[] {
+            "VIETNAMESE",
+            "ENGLISH",
+            "FRANCE",
+            "GERMANY",
+            "THAILAND"});
+            this.bunifuDropdown1.ItemTopMargin = 3;
+            this.bunifuDropdown1.Location = new System.Drawing.Point(856, 101);
+            this.bunifuDropdown1.Name = "bunifuDropdown1";
+            this.bunifuDropdown1.Size = new System.Drawing.Size(150, 32);
+            this.bunifuDropdown1.TabIndex = 17;
+            this.bunifuDropdown1.Text = null;
+            this.bunifuDropdown1.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.bunifuDropdown1.TextLeftMargin = 5;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(851, 64);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(97, 28);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "Language";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
             // 
@@ -1434,63 +1534,71 @@
             this.bunifuToggleSwitch1.ToggleStateOn = toggleState3;
             this.bunifuToggleSwitch1.Value = false;
             // 
-            // label15
+            // label11
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(851, 64);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(97, 28);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "Language";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(155, 105);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(39, 28);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Off";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuDropdown1
+            // label10
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuDropdown1.BorderRadius = 1;
-            this.bunifuDropdown1.Color = System.Drawing.Color.Silver;
-            this.bunifuDropdown1.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.bunifuDropdown1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.bunifuDropdown1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuDropdown1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.bunifuDropdown1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.bunifuDropdown1.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.bunifuDropdown1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.bunifuDropdown1.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.bunifuDropdown1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.bunifuDropdown1.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.bunifuDropdown1.FillDropDown = true;
-            this.bunifuDropdown1.FillIndicator = false;
-            this.bunifuDropdown1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuDropdown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown1.FormattingEnabled = true;
-            this.bunifuDropdown1.Icon = null;
-            this.bunifuDropdown1.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.bunifuDropdown1.IndicatorColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown1.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.bunifuDropdown1.ItemBackColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.ItemBorderColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.ItemForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown1.ItemHeight = 26;
-            this.bunifuDropdown1.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDropdown1.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.Items.AddRange(new object[] {
-            "VIETNAMESE",
-            "ENGLISH",
-            "FRANCE",
-            "GERMANY",
-            "THAILAND"});
-            this.bunifuDropdown1.ItemTopMargin = 3;
-            this.bunifuDropdown1.Location = new System.Drawing.Point(856, 101);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.Size = new System.Drawing.Size(150, 32);
-            this.bunifuDropdown1.TabIndex = 17;
-            this.bunifuDropdown1.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.bunifuDropdown1.TextLeftMargin = 5;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(70, 64);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(178, 28);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Dark Theme Mode ";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ToggleSwitchDarkMode
+            // 
+            this.ToggleSwitchDarkMode.Animation = 5;
+            this.ToggleSwitchDarkMode.BackColor = System.Drawing.Color.Transparent;
+            this.ToggleSwitchDarkMode.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ToggleSwitchDarkMode.BackgroundImage")));
+            this.ToggleSwitchDarkMode.Checked = false;
+            this.ToggleSwitchDarkMode.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ToggleSwitchDarkMode.Enabled = false;
+            this.ToggleSwitchDarkMode.InnerCirclePadding = 3;
+            this.ToggleSwitchDarkMode.Location = new System.Drawing.Point(75, 105);
+            this.ToggleSwitchDarkMode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ToggleSwitchDarkMode.Name = "ToggleSwitchDarkMode";
+            this.ToggleSwitchDarkMode.Size = new System.Drawing.Size(63, 28);
+            this.ToggleSwitchDarkMode.TabIndex = 0;
+            this.ToggleSwitchDarkMode.ThumbMargin = 3;
+            toggleState4.BackColor = System.Drawing.Color.DarkGray;
+            toggleState4.BackColorInner = System.Drawing.Color.White;
+            toggleState4.BorderColor = System.Drawing.Color.DarkGray;
+            toggleState4.BorderColorInner = System.Drawing.Color.White;
+            toggleState4.BorderRadius = 17;
+            toggleState4.BorderRadiusInner = 11;
+            toggleState4.BorderThickness = 1;
+            toggleState4.BorderThicknessInner = 1;
+            this.ToggleSwitchDarkMode.ToggleStateDisabled = toggleState4;
+            toggleState5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            toggleState5.BackColorInner = System.Drawing.Color.White;
+            toggleState5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            toggleState5.BorderColorInner = System.Drawing.Color.White;
+            toggleState5.BorderRadius = 17;
+            toggleState5.BorderRadiusInner = 11;
+            toggleState5.BorderThickness = 1;
+            toggleState5.BorderThicknessInner = 1;
+            this.ToggleSwitchDarkMode.ToggleStateOff = toggleState5;
+            toggleState6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
+            toggleState6.BackColorInner = System.Drawing.Color.White;
+            toggleState6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
+            toggleState6.BorderColorInner = System.Drawing.Color.White;
+            toggleState6.BorderRadius = 17;
+            toggleState6.BorderRadiusInner = 11;
+            toggleState6.BorderThickness = 1;
+            toggleState6.BorderThicknessInner = 1;
+            this.ToggleSwitchDarkMode.ToggleStateOn = toggleState6;
+            this.ToggleSwitchDarkMode.Value = false;
             // 
             // panel7
             // 
@@ -1499,130 +1607,23 @@
             this.panel7.Size = new System.Drawing.Size(1070, 264);
             this.panel7.TabIndex = 18;
             // 
-            // panel8
+            // tabPage7
             // 
-            this.panel8.Controls.Add(this.lbLogout);
-            this.panel8.Controls.Add(this.pBLogout);
-            this.panel8.Controls.Add(this.label17);
-            this.panel8.Controls.Add(this.label16);
-            this.panel8.Controls.Add(this.label14);
-            this.panel8.Controls.Add(this.bunifuPictureBox3);
-            this.panel8.Controls.Add(this.bunifuPictureBox2);
-            this.panel8.Controls.Add(this.bunifuPictureBox1);
-            this.panel8.Location = new System.Drawing.Point(0, 270);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1070, 666);
-            this.panel8.TabIndex = 0;
+            this.tabPage7.Controls.Add(this.flowLayoutProduct);
+            this.tabPage7.Location = new System.Drawing.Point(4, 4);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(1066, 936);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Product";
+            this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // bunifuPictureBox1
+            // flowLayoutProduct
             // 
-            this.bunifuPictureBox1.AllowFocused = false;
-            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPictureBox1.AutoSizeHeight = true;
-            this.bunifuPictureBox1.BorderRadius = 0;
-            this.bunifuPictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
-            this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(75, 37);
-            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(221, 221);
-            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuPictureBox1.TabIndex = 0;
-            this.bunifuPictureBox1.TabStop = false;
-            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
-            // 
-            // bunifuPictureBox2
-            // 
-            this.bunifuPictureBox2.AllowFocused = false;
-            this.bunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPictureBox2.AutoSizeHeight = true;
-            this.bunifuPictureBox2.BorderRadius = 0;
-            this.bunifuPictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox2.Image")));
-            this.bunifuPictureBox2.IsCircle = true;
-            this.bunifuPictureBox2.Location = new System.Drawing.Point(442, 37);
-            this.bunifuPictureBox2.Name = "bunifuPictureBox2";
-            this.bunifuPictureBox2.Size = new System.Drawing.Size(223, 223);
-            this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuPictureBox2.TabIndex = 1;
-            this.bunifuPictureBox2.TabStop = false;
-            this.bunifuPictureBox2.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
-            // 
-            // bunifuPictureBox3
-            // 
-            this.bunifuPictureBox3.AllowFocused = false;
-            this.bunifuPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPictureBox3.AutoSizeHeight = true;
-            this.bunifuPictureBox3.BorderRadius = 0;
-            this.bunifuPictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuPictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox3.Image")));
-            this.bunifuPictureBox3.IsCircle = true;
-            this.bunifuPictureBox3.Location = new System.Drawing.Point(785, 37);
-            this.bunifuPictureBox3.Name = "bunifuPictureBox3";
-            this.bunifuPictureBox3.Size = new System.Drawing.Size(221, 221);
-            this.bunifuPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuPictureBox3.TabIndex = 2;
-            this.bunifuPictureBox3.TabStop = false;
-            this.bunifuPictureBox3.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(132, 264);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(91, 28);
-            this.label14.TabIndex = 19;
-            this.label14.Text = "About us";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(485, 264);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(119, 28);
-            this.label16.TabIndex = 20;
-            this.label16.Text = "Terms of use";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(829, 264);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(130, 28);
-            this.label17.TabIndex = 21;
-            this.label17.Text = "Privacy Policy";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pBLogout
-            // 
-            this.pBLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pBLogout.Image = ((System.Drawing.Image)(resources.GetObject("pBLogout.Image")));
-            this.pBLogout.Location = new System.Drawing.Point(856, 515);
-            this.pBLogout.Name = "pBLogout";
-            this.pBLogout.Size = new System.Drawing.Size(63, 66);
-            this.pBLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBLogout.TabIndex = 19;
-            this.pBLogout.TabStop = false;
-            this.pBLogout.Click += new System.EventHandler(this.lbLogout_Click);
-            // 
-            // lbLogout
-            // 
-            this.lbLogout.AutoSize = true;
-            this.lbLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbLogout.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.lbLogout.Location = new System.Drawing.Point(915, 550);
-            this.lbLogout.Name = "lbLogout";
-            this.lbLogout.Size = new System.Drawing.Size(84, 28);
-            this.lbLogout.TabIndex = 22;
-            this.lbLogout.Text = "Log out";
-            this.lbLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbLogout.Click += new System.EventHandler(this.lbLogout_Click);
+            this.flowLayoutProduct.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutProduct.Name = "flowLayoutProduct";
+            this.flowLayoutProduct.Size = new System.Drawing.Size(1063, 936);
+            this.flowLayoutProduct.TabIndex = 1;
             // 
             // MainPage
             // 
@@ -1663,13 +1664,13 @@
             this.panel2.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            this.tabPage7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLogout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
+            this.tabPage7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

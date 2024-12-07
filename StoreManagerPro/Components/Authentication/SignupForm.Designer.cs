@@ -46,18 +46,18 @@
             this.txtFirstName = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.controlboxMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.controlboxTurnOff = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
+            this.txtConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,7 +88,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(701, 593);
+            this.guna2Panel1.Size = new System.Drawing.Size(712, 640);
             this.guna2Panel1.TabIndex = 4;
             // 
             // lbError
@@ -111,7 +111,7 @@
             this.lbLoginHere.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Transition1.SetDecoration(this.lbLoginHere, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lbLoginHere.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLoginHere.Location = new System.Drawing.Point(386, 529);
+            this.lbLoginHere.Location = new System.Drawing.Point(403, 529);
             this.lbLoginHere.Name = "lbLoginHere";
             this.lbLoginHere.Size = new System.Drawing.Size(74, 19);
             this.lbLoginHere.TabIndex = 18;
@@ -383,6 +383,94 @@
             this.txtPhoneNumber.Size = new System.Drawing.Size(306, 43);
             this.txtPhoneNumber.TabIndex = 4;
             // 
+            // txtUsername
+            // 
+            this.txtUsername.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
+            this.txtUsername.BorderRadius = 8;
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.txtUsername, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.txtUsername.DefaultText = "";
+            this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
+            this.txtUsername.DisabledState.Parent = this.txtUsername;
+            this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
+            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
+            this.txtUsername.FocusedState.Parent = this.txtUsername;
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
+            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsername.HoverState.Parent = this.txtUsername;
+            this.txtUsername.Location = new System.Drawing.Point(29, 191);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(175)))), ((int)(((byte)(23)))));
+            this.txtUsername.PlaceholderText = "Username";
+            this.txtUsername.SelectedText = "";
+            this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
+            this.txtUsername.Size = new System.Drawing.Size(306, 43);
+            this.txtUsername.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.controlboxMinimize);
+            this.panel1.Controls.Add(this.controlboxTurnOff);
+            this.panel1.Controls.Add(this.guna2PictureBox2);
+            this.guna2Transition1.SetDecoration(this.panel1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(718, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(281, 640);
+            this.panel1.TabIndex = 5;
+            // 
+            // controlboxMinimize
+            // 
+            this.controlboxMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.controlboxMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2Transition1.SetDecoration(this.controlboxMinimize, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.controlboxMinimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
+            this.controlboxMinimize.HoverState.Parent = this.controlboxMinimize;
+            this.controlboxMinimize.IconColor = System.Drawing.Color.White;
+            this.controlboxMinimize.Location = new System.Drawing.Point(208, 3);
+            this.controlboxMinimize.Name = "controlboxMinimize";
+            this.controlboxMinimize.ShadowDecoration.Parent = this.controlboxMinimize;
+            this.controlboxMinimize.Size = new System.Drawing.Size(32, 27);
+            this.controlboxMinimize.TabIndex = 9;
+            // 
+            // controlboxTurnOff
+            // 
+            this.controlboxTurnOff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Transition1.SetDecoration(this.controlboxTurnOff, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.controlboxTurnOff.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
+            this.controlboxTurnOff.HoverState.FillColor = System.Drawing.Color.Red;
+            this.controlboxTurnOff.HoverState.Parent = this.controlboxTurnOff;
+            this.controlboxTurnOff.IconColor = System.Drawing.Color.White;
+            this.controlboxTurnOff.Location = new System.Drawing.Point(246, 3);
+            this.controlboxTurnOff.Name = "controlboxTurnOff";
+            this.controlboxTurnOff.ShadowDecoration.Parent = this.controlboxTurnOff;
+            this.controlboxTurnOff.Size = new System.Drawing.Size(32, 27);
+            this.controlboxTurnOff.TabIndex = 8;
+            // 
+            // guna2Transition1
+            // 
+            this.guna2Transition1.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation1;
+            // 
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(175)))), ((int)(((byte)(23)))));
@@ -445,34 +533,6 @@
             this.txtPassword.TabIndex = 2;
             this.txtPassword.IconRightClick += new System.EventHandler(this.txtPassword_IconRightClick);
             // 
-            // txtUsername
-            // 
-            this.txtUsername.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
-            this.txtUsername.BorderRadius = 8;
-            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2Transition1.SetDecoration(this.txtUsername, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.txtUsername.DefaultText = "";
-            this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
-            this.txtUsername.DisabledState.Parent = this.txtUsername;
-            this.txtUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
-            this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
-            this.txtUsername.FocusedState.Parent = this.txtUsername;
-            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
-            this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.HoverState.Parent = this.txtUsername;
-            this.txtUsername.Location = new System.Drawing.Point(29, 191);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.PasswordChar = '\0';
-            this.txtUsername.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(175)))), ((int)(((byte)(23)))));
-            this.txtUsername.PlaceholderText = "Username";
-            this.txtUsername.SelectedText = "";
-            this.txtUsername.ShadowDecoration.Parent = this.txtUsername;
-            this.txtUsername.Size = new System.Drawing.Size(306, 43);
-            this.txtUsername.TabIndex = 1;
-            // 
             // guna2PictureBox1
             // 
             this.guna2Transition1.SetDecoration(this.guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -485,83 +545,23 @@
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.controlboxMinimize);
-            this.panel1.Controls.Add(this.controlboxTurnOff);
-            this.panel1.Controls.Add(this.guna2PictureBox2);
-            this.guna2Transition1.SetDecoration(this.panel1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(700, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(281, 593);
-            this.panel1.TabIndex = 5;
-            // 
-            // controlboxMinimize
-            // 
-            this.controlboxMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.controlboxMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2Transition1.SetDecoration(this.controlboxMinimize, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.controlboxMinimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
-            this.controlboxMinimize.HoverState.Parent = this.controlboxMinimize;
-            this.controlboxMinimize.IconColor = System.Drawing.Color.White;
-            this.controlboxMinimize.Location = new System.Drawing.Point(208, 3);
-            this.controlboxMinimize.Name = "controlboxMinimize";
-            this.controlboxMinimize.ShadowDecoration.Parent = this.controlboxMinimize;
-            this.controlboxMinimize.Size = new System.Drawing.Size(32, 27);
-            this.controlboxMinimize.TabIndex = 9;
-            // 
-            // controlboxTurnOff
-            // 
-            this.controlboxTurnOff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Transition1.SetDecoration(this.controlboxTurnOff, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.controlboxTurnOff.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(42)))), ((int)(((byte)(133)))));
-            this.controlboxTurnOff.HoverState.FillColor = System.Drawing.Color.Red;
-            this.controlboxTurnOff.HoverState.Parent = this.controlboxTurnOff;
-            this.controlboxTurnOff.IconColor = System.Drawing.Color.White;
-            this.controlboxTurnOff.Location = new System.Drawing.Point(246, 3);
-            this.controlboxTurnOff.Name = "controlboxTurnOff";
-            this.controlboxTurnOff.ShadowDecoration.Parent = this.controlboxTurnOff;
-            this.controlboxTurnOff.Size = new System.Drawing.Size(32, 27);
-            this.controlboxTurnOff.TabIndex = 8;
-            // 
             // guna2PictureBox2
             // 
             this.guna2Transition1.SetDecoration(this.guna2PictureBox2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2PictureBox2.Image = global::StoreManagerPro.Properties.Resources.ao_khoac_nam_swm6005_bee_2;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(-129, -37);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(-135, -37);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(523, 664);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(523, 677);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 1;
             this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2Transition1
-            // 
-            this.guna2Transition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation1;
             // 
             // SignupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 593);
+            this.ClientSize = new System.Drawing.Size(999, 640);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel1);
             this.guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -571,8 +571,8 @@
             this.Text = "Signup";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 

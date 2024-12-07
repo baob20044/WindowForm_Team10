@@ -349,7 +349,6 @@
             // 
             // pBProduct
             // 
-            this.pBProduct.Image = ((System.Drawing.Image)(resources.GetObject("pBProduct.Image")));
             this.pBProduct.Location = new System.Drawing.Point(37, 33);
             this.pBProduct.Name = "pBProduct";
             this.pBProduct.Size = new System.Drawing.Size(499, 631);

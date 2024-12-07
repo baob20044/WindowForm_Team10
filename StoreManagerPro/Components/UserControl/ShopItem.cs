@@ -2,19 +2,18 @@
 using Newtonsoft.Json;
 using System;
 using System.Drawing;
+using System.IO;
+using System.Net.Http;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Linq;
-using ImageMagick;
-using System.IO;
-using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace StoreManagerPro.Components
 {
     public partial class ShopItem : Bunifu.UI.WinForms.BunifuUserControl
     {
         public event Action<int> OnShopItemClick; // Event to notify when the item is clicked
-
         public int ProductId { get; } // Property to hold product ID
 
         public ShopItem(int productId)
@@ -30,6 +29,7 @@ namespace StoreManagerPro.Components
                 control.Click += (s, e) => OnShopItemClick?.Invoke(ProductId);
             }
         }
+
         private async void LoadProductData(int productId)
         {
             try
@@ -46,102 +46,84 @@ namespace StoreManagerPro.Components
 
                     if (product != null)
                     {
-                        var imageUrl = product.colors?.Find(c => c.images.Count > 0)?.images[0]?.url ?? "";
+                        // Set product details
+                        ItemLabel = product.name;
+                        ItemPrice = $"{product.price:N0} VND";
 
+                        // Load the product image based on the first available color
+                        var imageUrl = product.colors?.FirstOrDefault()?.images?.FirstOrDefault()?.url;
                         if (!string.IsNullOrEmpty(imageUrl))
                         {
-                            try
-                            {
-                                using (HttpClient httpClient = new HttpClient())
-                                {
-                                    // Tải dữ liệu byte từ URL
-                                    var imageBytes = await httpClient.GetByteArrayAsync(imageUrl);
-
-                                    // Check if data was returned successfully
-                                    if (imageBytes.Length > 0)
-                                    {
-                                        try
-                                        {
-                                            // Use Magick.NET to load the .webp image
-                                            using (var ms = new MemoryStream(imageBytes))
-                                            {
-                                                using (var magickImage = new MagickImage(ms))
-                                                {
-                                                    // Resize image (optional step)
-                                                    MagickGeometry geometry = new MagickGeometry(100, 100); // Set the desired size for the image
-                                                    magickImage.Resize(geometry);
-
-                                                    // Convert MagickImage to Bitmap
-                                                    using (var memStream = new MemoryStream())
-                                                    {
-                                                        // Write the image to the memorystream
-                                                        magickImage.Write(memStream);
-
-                                                        // Create a Bitmap from the memory stream
-                                                        pBImage.Image = new System.Drawing.Bitmap(memStream);
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        catch (Exception imgEx)
-                                        {
-                                            // MessageBox.Show($"Error loading image: {imgEx.Message}. Using fallback image.");
-                                            pBImage.Image = global::StoreManagerPro.Properties.Resources.cart; // Fallback image
-                                        }
-                                    }
-                                    else
-                                    {
-                                        // MessageBox.Show("No image data received.");
-                                        pBImage.Image = global::StoreManagerPro.Properties.Resources.cart; // Fallback image
-                                    }
-                                }
-                            }
-                            catch (Exception imgEx)
-                            {
-                                // MessageBox.Show($"Error downloading image: {imgEx.Message}");
-                                pBImage.Image = global::StoreManagerPro.Properties.Resources.cart; // Fallback image
-                            }
+                            await LoadProductImage(imageUrl);
                         }
                         else
                         {
-                            // MessageBox.Show("No image URL available.");
-                            pBImage.Image = global::StoreManagerPro.Properties.Resources.cart; // Fallback image
+                            ShowFallbackImage();
                         }
-
-                        ItemLabel = product.name;
-                        ItemPrice = $"{product.price:N0} VND";
                     }
                     else
                     {
-                        // MessageBox.Show("Product data is null or malformed.");
+                        ShowFallbackImage();
                     }
                 }
                 else
                 {
-                    // MessageBox.Show($"Failed to fetch product data.\nStatus: {response.StatusCode}\nError: {response.ErrorMessage}\nContent: {response.Content}");
+                    ShowFallbackImage();
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                // MessageBox.Show($"Error: {ex.Message}");
+                ShowFallbackImage();
             }
+        }
+
+        private async Task LoadProductImage(string imageUrl)
+        {
+            try
+            {
+                using (HttpClient httpClient = new HttpClient())
+                {
+                    var imageBytes = await httpClient.GetByteArrayAsync(imageUrl);
+
+                    if (imageBytes.Length > 0)
+                    {
+                        using (MemoryStream ms = new MemoryStream(imageBytes))
+                        {
+                            pBImage.Image = new Bitmap(ms); // Set the image directly to the PictureBox
+                        }
+                    }
+                    else
+                    {
+                        ShowFallbackImage();
+                    }
+                }
+            }
+            catch
+            {
+                ShowFallbackImage();
+            }
+        }
+
+        private void ShowFallbackImage()
+        {
+            pBImage.Image = global::StoreManagerPro.Properties.Resources.cart; // Default fallback image
         }
 
         public string ItemLabel
         {
-            get { return lbName.Text; }
-            set { lbName.Text = value; }
+            get => lbName.Text;
+            set => lbName.Text = value;
         }
 
         public string ItemPrice
         {
-            get { return lbPrice.Text; }
-            set { lbPrice.Text = value; }
+            get => lbPrice.Text;
+            set => lbPrice.Text = value;
         }
 
         private void lbName_Click(object sender, EventArgs e)
         {
-            
+            // Optional: Handle label click events if needed
         }
     }
 
