@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemDetail));
-            this.pBProduct = new System.Windows.Forms.PictureBox();
             this.lbName = new System.Windows.Forms.Label();
             this.lbPrice = new System.Windows.Forms.Label();
             this.guna2RatingStar1 = new Guna.UI2.WinForms.Guna2RatingStar();
@@ -39,7 +38,6 @@
             this.lbSize = new System.Windows.Forms.Label();
             this.btnAddToCart = new System.Windows.Forms.Button();
             this.lbQuantity = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.btnBuy = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -52,8 +50,8 @@
             this.lbDescription = new System.Windows.Forms.Label();
             this.DropdownColor = new Bunifu.UI.WinForms.BunifuDropdown();
             this.DropdownSize = new Bunifu.UI.WinForms.BunifuDropdown();
-            ((System.ComponentModel.ISupportInitialize)(this.pBProduct)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.pBProduct = new System.Windows.Forms.PictureBox();
+            this.NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBMomo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBVNPay)).BeginInit();
@@ -61,17 +59,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBVisa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBZalo)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumericUpDown1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pBProduct
-            // 
-            this.pBProduct.Image = ((System.Drawing.Image)(resources.GetObject("pBProduct.Image")));
-            this.pBProduct.Location = new System.Drawing.Point(37, 33);
-            this.pBProduct.Name = "pBProduct";
-            this.pBProduct.Size = new System.Drawing.Size(499, 631);
-            this.pBProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBProduct.TabIndex = 0;
-            this.pBProduct.TabStop = false;
             // 
             // lbName
             // 
@@ -150,14 +140,14 @@
             // 
             // btnAddToCart
             // 
-            this.btnAddToCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddToCart.Location = new System.Drawing.Point(729, 479);
+            this.btnAddToCart.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddToCart.Location = new System.Drawing.Point(729, 474);
             this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(309, 22);
+            this.btnAddToCart.Size = new System.Drawing.Size(309, 36);
             this.btnAddToCart.TabIndex = 17;
             this.btnAddToCart.Text = "Thêm vào giỏ hàng";
-            this.btnAddToCart.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAddToCart.UseVisualStyleBackColor = true;
+            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
             // lbQuantity
             // 
@@ -170,13 +160,6 @@
             this.lbQuantity.TabIndex = 18;
             this.lbQuantity.Text = "Số lượng";
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(588, 479);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(70, 22);
-            this.numericUpDown1.TabIndex = 19;
-            // 
             // btnBuy
             // 
             this.btnBuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(204)))), ((int)(((byte)(21)))));
@@ -187,6 +170,7 @@
             this.btnBuy.TabIndex = 20;
             this.btnBuy.Text = "Mua ngay";
             this.btnBuy.UseVisualStyleBackColor = false;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // panel1
             // 
@@ -363,18 +347,60 @@
             this.DropdownSize.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.DropdownSize.TextLeftMargin = 5;
             // 
+            // pBProduct
+            // 
+            this.pBProduct.Image = ((System.Drawing.Image)(resources.GetObject("pBProduct.Image")));
+            this.pBProduct.Location = new System.Drawing.Point(37, 33);
+            this.pBProduct.Name = "pBProduct";
+            this.pBProduct.Size = new System.Drawing.Size(499, 631);
+            this.pBProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBProduct.TabIndex = 0;
+            this.pBProduct.TabStop = false;
+            // 
+            // NumericUpDown1
+            // 
+            this.NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
+            this.NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NumericUpDown1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.NumericUpDown1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.NumericUpDown1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.NumericUpDown1.DisabledState.Parent = this.NumericUpDown1;
+            this.NumericUpDown1.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
+            this.NumericUpDown1.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
+            this.NumericUpDown1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.NumericUpDown1.FocusedState.Parent = this.NumericUpDown1;
+            this.NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumericUpDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.NumericUpDown1.Location = new System.Drawing.Point(588, 474);
+            this.NumericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NumericUpDown1.Name = "NumericUpDown1";
+            this.NumericUpDown1.ShadowDecoration.Parent = this.NumericUpDown1;
+            this.NumericUpDown1.Size = new System.Drawing.Size(100, 36);
+            this.NumericUpDown1.TabIndex = 27;
+            this.NumericUpDown1.UpDownButtonFillColor = System.Drawing.Color.White;
+            this.NumericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // ItemDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.NumericUpDown1);
             this.Controls.Add(this.DropdownSize);
             this.Controls.Add(this.DropdownColor);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBuy);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.lbQuantity);
             this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.lbSize);
@@ -387,8 +413,6 @@
             this.Controls.Add(this.pBProduct);
             this.Name = "ItemDetail";
             this.Size = new System.Drawing.Size(1074, 936);
-            ((System.ComponentModel.ISupportInitialize)(this.pBProduct)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pBMomo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBVNPay)).EndInit();
@@ -397,6 +421,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBZalo)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,7 +440,6 @@
         private System.Windows.Forms.Label lbSize;
         private System.Windows.Forms.Button btnAddToCart;
         private System.Windows.Forms.Label lbQuantity;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button btnBuy;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -427,5 +452,6 @@
         private System.Windows.Forms.Label lbDescription;
         private Bunifu.UI.WinForms.BunifuDropdown DropdownColor;
         private Bunifu.UI.WinForms.BunifuDropdown DropdownSize;
+        private Guna.UI2.WinForms.Guna2NumericUpDown NumericUpDown1;
     }
 }
