@@ -65,7 +65,6 @@
             // 
             this.pBImage.BackColor = System.Drawing.Color.Gainsboro;
             this.pBImage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pBImage.Image = global::StoreManagerPro.Properties.Resources.ao_khoac_nam_yody_AKM7015_TIT__4_;
             this.pBImage.Location = new System.Drawing.Point(66, 29);
             this.pBImage.Name = "pBImage";
             this.pBImage.Size = new System.Drawing.Size(197, 162);

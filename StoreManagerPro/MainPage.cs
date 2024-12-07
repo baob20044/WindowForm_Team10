@@ -48,7 +48,7 @@ namespace StoreManagerPro
         }
 
         // Khi chọn product thì hiện sản phẩm
-        private void HandleShopItemClick(int productId)
+        private void HandleShopItemClick(int productId) 
         {
             // Navigate to the "Product" page and add the ItemDetail
             pages.SetPage("Product");
@@ -58,7 +58,7 @@ namespace StoreManagerPro
         }
 
         // Load trang gồm nhiều sản phảm để lựa chọn + load theo trang dung` filteredItems
-        private void LoadPage(int pageIndex)
+        private void LoadPage(int pageIndex) /* Home Page */
         {
             flowLayout.Controls.Clear(); // Clear existing controls
 
@@ -81,7 +81,7 @@ namespace StoreManagerPro
         }
 
         // Trang sau
-        private void btnNext_Click(object sender, EventArgs e)
+        private void btnNext_Click(object sender, EventArgs e) /* Home Page */
         {
             if ((currentPage + 1) * pageSize < filteredItems.Count)
             {
@@ -91,7 +91,7 @@ namespace StoreManagerPro
         }
 
         // Trang trước 
-        private void btnPrevious_Click(object sender, EventArgs e)
+        private void btnPrevious_Click(object sender, EventArgs e) /* Home Page */
         {
             if (currentPage > 0)
             {
@@ -101,7 +101,7 @@ namespace StoreManagerPro
         }
 
         // Chức năng tìm kiếm 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
+        private void txtSearch_TextChanged(object sender, EventArgs e) /* Home Page */
         {
             string searchText = txtSearch.Text.ToLower();
 
@@ -116,11 +116,14 @@ namespace StoreManagerPro
         }
 
         // Chức năng chuyển trang
-        private void btnSideMenu_Click(object sender, EventArgs e)
+        private void btnSideMenu_Click(object sender, EventArgs e) 
         {
+            
             pages.SetPage(((Control)sender).Text);
         }
-        public void ChangeToCartPage()
+
+
+        public void ChangeToCartPage() /* Cart Page */
         {
             pages.SetPage("Cart"); // Change the page to the Cart page
         }
@@ -131,7 +134,7 @@ namespace StoreManagerPro
         }
 
         // Khi xóa cartItem trong mainpage, tự động cập nhật  
-        public void RemoveCartItem(CartItem cartItem)
+        public void RemoveCartItem(CartItem cartItem) /* Cart Page */
         {
             // Remove the item from the cart
             flowLayoutCart.Controls.Remove(cartItem);
@@ -140,7 +143,7 @@ namespace StoreManagerPro
             UpdateCartTotals();
         }
         // Cập nhật giỏ hàng khi click thêm giỏ hàng hoặc mua ngay từ trang ItemDetail
-        public void UpdateCartTotals()
+        public void UpdateCartTotals() /* Cart Page */
         {
             decimal totalMoney = 0;
             decimal transportFee = 30000;  // Static transport fee (VND)
@@ -181,7 +184,7 @@ namespace StoreManagerPro
         }
 
 
-        private void NavigateToLoginPage()
+        private void NavigateToLoginPage() /* Setting Page */
         {
             // Initialize the Timer for fade-out
             fadeTimer = new Timer();
@@ -189,7 +192,7 @@ namespace StoreManagerPro
             fadeTimer.Tick += FadeToLogin;
             fadeTimer.Start();
         }
-        private void FadeToLogin(object sender, EventArgs e)
+        private void FadeToLogin(object sender, EventArgs e) /* Setting Page */
         {
             if (this.Opacity > 0)
             {
@@ -217,7 +220,7 @@ namespace StoreManagerPro
                 Application.DoEvents(); // Allow UI to refresh and clear pending events
             }
         }
-        private void lbLogout_Click(object sender, EventArgs e)
+        private void lbLogout_Click(object sender, EventArgs e) /* Setting Page */
         {
             NavigateToLoginPage();
         }

@@ -4,6 +4,7 @@ using System.IO;
 using System.Windows.Forms;
 using Microsoft.VisualBasic.Logging;
 using RestSharp;
+using StoreManagerPro.Components.Authentication;
 using StoreManagerPro.Properties;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
@@ -88,7 +89,10 @@ namespace StoreManagerPro
         {
             NavigateToSignupForm();
         }
-
+        private void lbForgotpass_Click(object sender, EventArgs e)
+        {
+            NavigateToForgotPass();
+        }
         //Chuyển trang 
         private void NavigateToSignupForm()
         {
@@ -104,6 +108,14 @@ namespace StoreManagerPro
             fadeTimer = new Timer();
             fadeTimer.Interval = 10; // Faster updates for smoother fade
             fadeTimer.Tick += FadeToMainPage;
+            fadeTimer.Start();
+        }
+        private void NavigateToForgotPass()
+        {
+            // Initialize the Timer for fade-out
+            fadeTimer = new Timer();
+            fadeTimer.Interval = 10; // Faster updates for smoother fade
+            fadeTimer.Tick += FadeToForgotPass;
             fadeTimer.Start();
         }
         private void FadeToSignup(object sender, EventArgs e)
@@ -162,6 +174,36 @@ namespace StoreManagerPro
                 Application.DoEvents(); // Allow UI to refresh and clear pending events
             }
         }
+        private void FadeToForgotPass(object sender, EventArgs e)
+        {
+            if (this.Opacity > 0)
+            {
+                this.Opacity -= 0.1; // Faster fade with larger decrement
+            }
+            else
+            {
+                fadeTimer.Stop();
+                fadeTimer.Dispose();
+
+                // Hide the current form before opening the SignupForm
+                this.Hide();
+
+                // Open SignupForm
+                ForgotPasswordForm fpPage = new ForgotPasswordForm();
+                fpPage.StartPosition = FormStartPosition.CenterScreen;
+                fpPage.Location = this.Location;
+                fpPage.ShowDialog();  // Show the new form
+
+                // After showing the new form, dispose of the current form
+                this.Close(); // Close the form
+                this.Dispose(); // Dispose of the form's resources
+
+                // Ensure the old form is completely removed from memory and taskbar
+                Application.DoEvents(); // Allow UI to refresh and clear pending events
+            }
+        }
+
+
         private void controlboxTurnOff_Click(object sender, EventArgs e)
         {
             if (!toggleRememberme.Checked)
