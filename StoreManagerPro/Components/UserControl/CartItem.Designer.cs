@@ -45,6 +45,7 @@
             // lbName
             // 
             this.lbName.AutoSize = true;
+            this.lbName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.Location = new System.Drawing.Point(175, 19);
             this.lbName.Name = "lbName";
@@ -64,6 +65,7 @@
             // 
             // pBProduct
             // 
+            this.pBProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBProduct.Location = new System.Drawing.Point(30, 19);
             this.pBProduct.Name = "pBProduct";
             this.pBProduct.Size = new System.Drawing.Size(117, 142);

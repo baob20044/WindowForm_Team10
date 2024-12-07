@@ -244,6 +244,7 @@
   <ItemGroup>
     <Content Include="Logo-Yody-Yellow-1024x878.ico" />
     <Content Include="Resources\ao-khoac-nam-swm6005-bee-2.png" />
+    <None Include="Resources\Red.png" />
     <None Include="Resources\User-removebg-preview.png" />
     <None Include="Resources\Search.png" />
     <None Include="Resources\Buying.png" />
@@ -252,6 +253,7 @@
     <None Include="Resources\digital-sale-banner-sign-template_30227-62.jpg" />
     <None Include="Resources\Eye.png" />
     <None Include="Resources\Closed_Eye.png" />
+    <None Include="Resources\fullColor.jpg" />
     <Content Include="Resources\Logo-Yody-Yellow-1024x878.ico" />
     <Content Include="Resources\Logo-Yody-Yellow-1024x878.png" />
     <Content Include="Resources\menu_woman.png" />

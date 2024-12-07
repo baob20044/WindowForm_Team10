@@ -14,6 +14,8 @@ namespace StoreManagerPro.Components
     public partial class ShopItem : Bunifu.UI.WinForms.BunifuUserControl
     {
         public event Action<int> OnShopItemClick; // Event to notify when the item is clicked
+        public Product LoadedProduct { get; private set; } // Expose the product
+
         public int ProductId { get; } // Property to hold product ID
 
         public ShopItem(int productId)
@@ -42,16 +44,16 @@ namespace StoreManagerPro.Components
 
                 if (response.IsSuccessful)
                 {
-                    var product = JsonConvert.DeserializeObject<Product>(response.Content);
+                    LoadedProduct = JsonConvert.DeserializeObject<Product>(response.Content);
 
-                    if (product != null)
+                    if (LoadedProduct != null)
                     {
                         // Set product details
-                        ItemLabel = product.name;
-                        ItemPrice = $"{product.price:N0} VND";
+                        ItemLabel = LoadedProduct.Name;
+                        ItemPrice = $"{LoadedProduct.Price:N0} VND";
 
                         // Load the product image based on the first available color
-                        var imageUrl = product.colors?.FirstOrDefault()?.images?.FirstOrDefault()?.url;
+                        var imageUrl = LoadedProduct.Colors?.FirstOrDefault()?.Images?.FirstOrDefault()?.Url;
                         if (!string.IsNullOrEmpty(imageUrl))
                         {
                             await LoadProductImage(imageUrl);
@@ -76,6 +78,7 @@ namespace StoreManagerPro.Components
                 ShowFallbackImage();
             }
         }
+
 
         private async Task LoadProductImage(string imageUrl)
         {
@@ -109,6 +112,7 @@ namespace StoreManagerPro.Components
             pBImage.Image = global::StoreManagerPro.Properties.Resources.cart; // Default fallback image
         }
 
+
         public string ItemLabel
         {
             get => lbName.Text;
@@ -130,27 +134,44 @@ namespace StoreManagerPro.Components
     // Model classes
     public class Product
     {
-        public int productId { get; set; }
-        public string name { get; set; }
-        public string subcategoryName { get; set; }
-        public decimal price { get; set; }
-        public List<Color> colors { get; set; }
+        public int ProductId { get; set; }
+        public string Name { get; set; }
+        public string SubcategoryName { get; set; }
+        public string Description { get; set; }
+        public decimal Price { get; set; }
+        public decimal Cost { get; set; }
+        public int InStock { get; set; } // Stock quantity
+        public List<Color> Colors { get; set; }
+        public List<Size> Sizes { get; set; }
+    }
+
+    public class Size
+    {
+        public int SizeId { get; set; }
+        public string SizeValue { get; set; } // e.g., "S", "M", "L"
+
+        public Size(int sizeId, string sizeValue)
+        {
+            SizeId = sizeId;
+            SizeValue = sizeValue;
+        }
     }
 
     public class Color
     {
-        public int colorId { get; set; }
-        public string hexaCode { get; set; }
-        public string name { get; set; }
-        public List<ImageInfo> images { get; set; }
+        public int ColorId { get; set; }
+        public string HexaCode { get; set; }
+        public string Name { get; set; }
+        public List<ImageInfo> Images { get; set; }
     }
 
     public class ImageInfo
     {
-        public int imageId { get; set; }
-        public string url { get; set; }
-        public string alt { get; set; }
-        public int productId { get; set; }
-        public int colorId { get; set; }
+        public int ImageId { get; set; }
+        public string Url { get; set; }
+        public string Alt { get; set; }
+        public int ProductId { get; set; }
+        public int ColorId { get; set; }
     }
+
 }

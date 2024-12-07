@@ -133,6 +133,16 @@ namespace StoreManagerPro.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fullColor {
+            get {
+                object obj = ResourceManager.GetObject("fullColor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_Yody_Yellow_1024x878 {
             get {
                 object obj = ResourceManager.GetObject("Logo-Yody-Yellow-1024x878", resourceCulture);
@@ -166,6 +176,16 @@ namespace StoreManagerPro.Properties {
         internal static System.Drawing.Bitmap menu_woman1 {
             get {
                 object obj = ResourceManager.GetObject("menu_woman1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Red {
+            get {
+                object obj = ResourceManager.GetObject("Red", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

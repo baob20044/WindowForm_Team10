@@ -69,6 +69,55 @@
             this.pBAvatar = new System.Windows.Forms.PictureBox();
             this.txtSearch = new Bunifu.UI.WinForms.BunifuTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.flowLayoutFiltered = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.cbAbove750 = new System.Windows.Forms.CheckBox();
+            this.cbMiddle = new System.Windows.Forms.CheckBox();
+            this.cbBelow350 = new System.Windows.Forms.CheckBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbSizeXl = new System.Windows.Forms.CheckBox();
+            this.cbSizeL = new System.Windows.Forms.CheckBox();
+            this.cbSizeM = new System.Windows.Forms.CheckBox();
+            this.cbSizeS = new System.Windows.Forms.CheckBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.cbWhite = new System.Windows.Forms.CheckBox();
+            this.cbBrown = new System.Windows.Forms.CheckBox();
+            this.cbPurple = new System.Windows.Forms.CheckBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.cbPink = new System.Windows.Forms.CheckBox();
+            this.bunifuPictureBox9 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.cbGray = new System.Windows.Forms.CheckBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.cbOrange = new System.Windows.Forms.CheckBox();
+            this.bunifuPictureBox10 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.cbYellow = new System.Windows.Forms.CheckBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.cbRed = new System.Windows.Forms.CheckBox();
+            this.bunifuPictureBox11 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.cbBlack = new System.Windows.Forms.CheckBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.bunifuPictureBox12 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.bunifuPictureBox5 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.bunifuPictureBox4 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.bunifuPictureBox7 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.bunifuPictureBox8 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.bunifuPictureBox6 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.flowLayoutCart = new System.Windows.Forms.FlowLayoutPanel();
@@ -110,11 +159,11 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.bunifuToggleSwitch1 = new Bunifu.UI.WinForms.BunifuToggleSwitch();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.ToggleSwitchDarkMode = new Bunifu.UI.WinForms.BunifuToggleSwitch();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.bunifuToggleSwitch1 = new Bunifu.UI.WinForms.BunifuToggleSwitch();
+            this.ToggleSwitchDarkMode = new Bunifu.UI.WinForms.BunifuToggleSwitch();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.flowLayoutProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
@@ -124,6 +173,19 @@
             this.pages.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBAvatar)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox6)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -785,10 +847,10 @@
             this.pages.Location = new System.Drawing.Point(297, 0);
             this.pages.Multiline = true;
             this.pages.Name = "pages";
-            this.pages.Page = this.tabPage1;
-            this.pages.PageIndex = 0;
-            this.pages.PageName = "tabPage1";
-            this.pages.PageTitle = "Home";
+            this.pages.Page = this.tabPage2;
+            this.pages.PageIndex = 1;
+            this.pages.PageName = "tabPage2";
+            this.pages.PageTitle = "Category";
             this.pages.SelectedIndex = 0;
             this.pages.Size = new System.Drawing.Size(1074, 965);
             this.pages.TabIndex = 13;
@@ -966,12 +1028,678 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage2.Controls.Add(this.flowLayoutFiltered);
+            this.tabPage2.Controls.Add(this.panel11);
+            this.tabPage2.Controls.Add(this.panel10);
+            this.tabPage2.Controls.Add(this.label19);
+            this.tabPage2.Controls.Add(this.panel9);
             this.tabPage2.Location = new System.Drawing.Point(4, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1066, 936);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Category";
+            // 
+            // flowLayoutFiltered
+            // 
+            this.flowLayoutFiltered.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutFiltered.AutoScroll = true;
+            this.flowLayoutFiltered.Location = new System.Drawing.Point(19, 478);
+            this.flowLayoutFiltered.Name = "flowLayoutFiltered";
+            this.flowLayoutFiltered.Size = new System.Drawing.Size(1041, 282);
+            this.flowLayoutFiltered.TabIndex = 54;
+            this.flowLayoutFiltered.WrapContents = false;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.SystemColors.Window;
+            this.panel11.Controls.Add(this.label34);
+            this.panel11.Controls.Add(this.label33);
+            this.panel11.Controls.Add(this.label32);
+            this.panel11.Controls.Add(this.cbAbove750);
+            this.panel11.Controls.Add(this.cbMiddle);
+            this.panel11.Controls.Add(this.cbBelow350);
+            this.panel11.Controls.Add(this.label31);
+            this.panel11.Location = new System.Drawing.Point(19, 337);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1041, 126);
+            this.panel11.TabIndex = 54;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(224, 84);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(116, 23);
+            this.label34.TabIndex = 54;
+            this.label34.Text = "Trên 750.000đ";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(224, 49);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(187, 23);
+            this.label33.TabIndex = 53;
+            this.label33.Text = "Từ 350.000đ - 750.000đ";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(224, 14);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(119, 23);
+            this.label32.TabIndex = 52;
+            this.label32.Text = "Dưới 350.000đ";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cbAbove750
+            // 
+            this.cbAbove750.AutoSize = true;
+            this.cbAbove750.Location = new System.Drawing.Point(189, 88);
+            this.cbAbove750.Name = "cbAbove750";
+            this.cbAbove750.Size = new System.Drawing.Size(18, 17);
+            this.cbAbove750.TabIndex = 45;
+            this.cbAbove750.UseVisualStyleBackColor = true;
+            this.cbAbove750.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
+            // 
+            // cbMiddle
+            // 
+            this.cbMiddle.AutoSize = true;
+            this.cbMiddle.Location = new System.Drawing.Point(189, 53);
+            this.cbMiddle.Name = "cbMiddle";
+            this.cbMiddle.Size = new System.Drawing.Size(18, 17);
+            this.cbMiddle.TabIndex = 44;
+            this.cbMiddle.UseVisualStyleBackColor = true;
+            this.cbMiddle.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
+            // 
+            // cbBelow350
+            // 
+            this.cbBelow350.AutoSize = true;
+            this.cbBelow350.Location = new System.Drawing.Point(189, 18);
+            this.cbBelow350.Name = "cbBelow350";
+            this.cbBelow350.Size = new System.Drawing.Size(18, 17);
+            this.cbBelow350.TabIndex = 43;
+            this.cbBelow350.UseVisualStyleBackColor = true;
+            this.cbBelow350.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(12, 26);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(87, 28);
+            this.label31.TabIndex = 13;
+            this.label31.Text = "Theo giá";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.SystemColors.Window;
+            this.panel10.Controls.Add(this.guna2TextBox4);
+            this.panel10.Controls.Add(this.guna2TextBox2);
+            this.panel10.Controls.Add(this.guna2TextBox1);
+            this.panel10.Controls.Add(this.guna2TextBox3);
+            this.panel10.Controls.Add(this.cbSizeXl);
+            this.panel10.Controls.Add(this.cbSizeL);
+            this.panel10.Controls.Add(this.cbSizeM);
+            this.panel10.Controls.Add(this.cbSizeS);
+            this.panel10.Controls.Add(this.label30);
+            this.panel10.Location = new System.Drawing.Point(19, 205);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(1041, 126);
+            this.panel10.TabIndex = 52;
+            // 
+            // guna2TextBox4
+            // 
+            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox4.DefaultText = "XL";
+            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox4.DisabledState.Parent = this.guna2TextBox4;
+            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox4.Enabled = false;
+            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox4.FocusedState.Parent = this.guna2TextBox4;
+            this.guna2TextBox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox4.HoverState.Parent = this.guna2TextBox4;
+            this.guna2TextBox4.Location = new System.Drawing.Point(493, 26);
+            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox4.Name = "guna2TextBox4";
+            this.guna2TextBox4.PasswordChar = '\0';
+            this.guna2TextBox4.PlaceholderText = "";
+            this.guna2TextBox4.SelectedText = "";
+            this.guna2TextBox4.SelectionStart = 2;
+            this.guna2TextBox4.ShadowDecoration.Parent = this.guna2TextBox4;
+            this.guna2TextBox4.Size = new System.Drawing.Size(44, 35);
+            this.guna2TextBox4.TabIndex = 53;
+            this.guna2TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // guna2TextBox2
+            // 
+            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox2.DefaultText = "L";
+            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.Enabled = false;
+            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.Location = new System.Drawing.Point(387, 26);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox2.Name = "guna2TextBox2";
+            this.guna2TextBox2.PasswordChar = '\0';
+            this.guna2TextBox2.PlaceholderText = "";
+            this.guna2TextBox2.SelectedText = "";
+            this.guna2TextBox2.SelectionStart = 1;
+            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.Size = new System.Drawing.Size(44, 35);
+            this.guna2TextBox2.TabIndex = 52;
+            this.guna2TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "S";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.Enabled = false;
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Location = new System.Drawing.Point(175, 26);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.SelectionStart = 1;
+            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Size = new System.Drawing.Size(44, 35);
+            this.guna2TextBox1.TabIndex = 51;
+            this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // guna2TextBox3
+            // 
+            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox3.DefaultText = "M";
+            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox3.DisabledState.Parent = this.guna2TextBox3;
+            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox3.Enabled = false;
+            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
+            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
+            this.guna2TextBox3.Location = new System.Drawing.Point(281, 26);
+            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox3.Name = "guna2TextBox3";
+            this.guna2TextBox3.PasswordChar = '\0';
+            this.guna2TextBox3.PlaceholderText = "";
+            this.guna2TextBox3.SelectedText = "";
+            this.guna2TextBox3.SelectionStart = 1;
+            this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
+            this.guna2TextBox3.Size = new System.Drawing.Size(44, 35);
+            this.guna2TextBox3.TabIndex = 50;
+            this.guna2TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cbSizeXl
+            // 
+            this.cbSizeXl.AutoSize = true;
+            this.cbSizeXl.Location = new System.Drawing.Point(507, 80);
+            this.cbSizeXl.Name = "cbSizeXl";
+            this.cbSizeXl.Size = new System.Drawing.Size(18, 17);
+            this.cbSizeXl.TabIndex = 46;
+            this.cbSizeXl.UseVisualStyleBackColor = true;
+            this.cbSizeXl.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
+            // 
+            // cbSizeL
+            // 
+            this.cbSizeL.AutoSize = true;
+            this.cbSizeL.Location = new System.Drawing.Point(401, 80);
+            this.cbSizeL.Name = "cbSizeL";
+            this.cbSizeL.Size = new System.Drawing.Size(18, 17);
+            this.cbSizeL.TabIndex = 45;
+            this.cbSizeL.UseVisualStyleBackColor = true;
+            this.cbSizeL.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
+            // 
+            // cbSizeM
+            // 
+            this.cbSizeM.AutoSize = true;
+            this.cbSizeM.Location = new System.Drawing.Point(295, 80);
+            this.cbSizeM.Name = "cbSizeM";
+            this.cbSizeM.Size = new System.Drawing.Size(18, 17);
+            this.cbSizeM.TabIndex = 44;
+            this.cbSizeM.UseVisualStyleBackColor = true;
+            this.cbSizeM.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
+            // 
+            // cbSizeS
+            // 
+            this.cbSizeS.AutoSize = true;
+            this.cbSizeS.Location = new System.Drawing.Point(189, 80);
+            this.cbSizeS.Name = "cbSizeS";
+            this.cbSizeS.Size = new System.Drawing.Size(18, 17);
+            this.cbSizeS.TabIndex = 43;
+            this.cbSizeS.UseVisualStyleBackColor = true;
+            this.cbSizeS.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(12, 26);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(105, 28);
+            this.label30.TabIndex = 13;
+            this.label30.Text = "Kích thước";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(29, 19);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(96, 37);
+            this.label19.TabIndex = 12;
+            this.label19.Text = "Bộ lọc";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.SystemColors.Window;
+            this.panel9.Controls.Add(this.cbWhite);
+            this.panel9.Controls.Add(this.cbBrown);
+            this.panel9.Controls.Add(this.cbPurple);
+            this.panel9.Controls.Add(this.label25);
+            this.panel9.Controls.Add(this.cbPink);
+            this.panel9.Controls.Add(this.bunifuPictureBox9);
+            this.panel9.Controls.Add(this.cbGray);
+            this.panel9.Controls.Add(this.label26);
+            this.panel9.Controls.Add(this.cbOrange);
+            this.panel9.Controls.Add(this.bunifuPictureBox10);
+            this.panel9.Controls.Add(this.cbYellow);
+            this.panel9.Controls.Add(this.label27);
+            this.panel9.Controls.Add(this.cbRed);
+            this.panel9.Controls.Add(this.bunifuPictureBox11);
+            this.panel9.Controls.Add(this.cbBlack);
+            this.panel9.Controls.Add(this.label28);
+            this.panel9.Controls.Add(this.label18);
+            this.panel9.Controls.Add(this.bunifuPictureBox12);
+            this.panel9.Controls.Add(this.bunifuPictureBox5);
+            this.panel9.Controls.Add(this.label23);
+            this.panel9.Controls.Add(this.bunifuPictureBox4);
+            this.panel9.Controls.Add(this.bunifuPictureBox7);
+            this.panel9.Controls.Add(this.label20);
+            this.panel9.Controls.Add(this.label24);
+            this.panel9.Controls.Add(this.label21);
+            this.panel9.Controls.Add(this.bunifuPictureBox8);
+            this.panel9.Controls.Add(this.bunifuPictureBox6);
+            this.panel9.Controls.Add(this.label22);
+            this.panel9.Location = new System.Drawing.Point(21, 73);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1041, 126);
+            this.panel9.TabIndex = 41;
+            // 
+            // cbWhite
+            // 
+            this.cbWhite.AutoSize = true;
+            this.cbWhite.Location = new System.Drawing.Point(835, 77);
+            this.cbWhite.Name = "cbWhite";
+            this.cbWhite.Size = new System.Drawing.Size(18, 17);
+            this.cbWhite.TabIndex = 50;
+            this.cbWhite.UseVisualStyleBackColor = true;
+            this.cbWhite.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
+            // 
+            // cbBrown
+            // 
+            this.cbBrown.AutoSize = true;
+            this.cbBrown.Location = new System.Drawing.Point(754, 77);
+            this.cbBrown.Name = "cbBrown";
+            this.cbBrown.Size = new System.Drawing.Size(18, 17);
+            this.cbBrown.TabIndex = 49;
+            this.cbBrown.UseVisualStyleBackColor = true;
+            this.cbBrown.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
+            // 
+            // cbPurple
+            // 
+            this.cbPurple.AutoSize = true;
+            this.cbPurple.Location = new System.Drawing.Point(673, 77);
+            this.cbPurple.Name = "cbPurple";
+            this.cbPurple.Size = new System.Drawing.Size(18, 17);
+            this.cbPurple.TabIndex = 48;
+            this.cbPurple.UseVisualStyleBackColor = true;
+            this.cbPurple.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(826, 47);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(43, 16);
+            this.label25.TabIndex = 36;
+            this.label25.Text = "Trắng";
+            // 
+            // cbPink
+            // 
+            this.cbPink.AutoSize = true;
+            this.cbPink.Location = new System.Drawing.Point(592, 77);
+            this.cbPink.Name = "cbPink";
+            this.cbPink.Size = new System.Drawing.Size(18, 17);
+            this.cbPink.TabIndex = 47;
+            this.cbPink.UseVisualStyleBackColor = true;
+            this.cbPink.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
+            // 
+            // bunifuPictureBox9
+            // 
+            this.bunifuPictureBox9.AllowFocused = false;
+            this.bunifuPictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox9.AutoSizeHeight = true;
+            this.bunifuPictureBox9.BackColor = System.Drawing.Color.White;
+            this.bunifuPictureBox9.BorderRadius = 12;
+            this.bunifuPictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox9.Image")));
+            this.bunifuPictureBox9.IsCircle = true;
+            this.bunifuPictureBox9.Location = new System.Drawing.Point(831, 8);
+            this.bunifuPictureBox9.Name = "bunifuPictureBox9";
+            this.bunifuPictureBox9.Size = new System.Drawing.Size(25, 25);
+            this.bunifuPictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox9.TabIndex = 35;
+            this.bunifuPictureBox9.TabStop = false;
+            this.bunifuPictureBox9.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // cbGray
+            // 
+            this.cbGray.AutoSize = true;
+            this.cbGray.Location = new System.Drawing.Point(511, 77);
+            this.cbGray.Name = "cbGray";
+            this.cbGray.Size = new System.Drawing.Size(18, 17);
+            this.cbGray.TabIndex = 46;
+            this.cbGray.UseVisualStyleBackColor = true;
+            this.cbGray.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(746, 47);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(32, 16);
+            this.label26.TabIndex = 34;
+            this.label26.Text = "Nâu";
+            // 
+            // cbOrange
+            // 
+            this.cbOrange.AutoSize = true;
+            this.cbOrange.Location = new System.Drawing.Point(430, 77);
+            this.cbOrange.Name = "cbOrange";
+            this.cbOrange.Size = new System.Drawing.Size(18, 17);
+            this.cbOrange.TabIndex = 45;
+            this.cbOrange.UseVisualStyleBackColor = true;
+            this.cbOrange.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
+            // 
+            // bunifuPictureBox10
+            // 
+            this.bunifuPictureBox10.AllowFocused = false;
+            this.bunifuPictureBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox10.AutoSizeHeight = true;
+            this.bunifuPictureBox10.BackColor = System.Drawing.Color.Black;
+            this.bunifuPictureBox10.BorderRadius = 12;
+            this.bunifuPictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox10.Image")));
+            this.bunifuPictureBox10.IsCircle = true;
+            this.bunifuPictureBox10.Location = new System.Drawing.Point(750, 8);
+            this.bunifuPictureBox10.Name = "bunifuPictureBox10";
+            this.bunifuPictureBox10.Size = new System.Drawing.Size(25, 25);
+            this.bunifuPictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bunifuPictureBox10.TabIndex = 33;
+            this.bunifuPictureBox10.TabStop = false;
+            this.bunifuPictureBox10.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // cbYellow
+            // 
+            this.cbYellow.AutoSize = true;
+            this.cbYellow.Location = new System.Drawing.Point(349, 77);
+            this.cbYellow.Name = "cbYellow";
+            this.cbYellow.Size = new System.Drawing.Size(18, 17);
+            this.cbYellow.TabIndex = 44;
+            this.cbYellow.UseVisualStyleBackColor = true;
+            this.cbYellow.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(664, 47);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(30, 16);
+            this.label27.TabIndex = 32;
+            this.label27.Text = "Tím";
+            // 
+            // cbRed
+            // 
+            this.cbRed.AutoSize = true;
+            this.cbRed.Location = new System.Drawing.Point(268, 77);
+            this.cbRed.Name = "cbRed";
+            this.cbRed.Size = new System.Drawing.Size(18, 17);
+            this.cbRed.TabIndex = 43;
+            this.cbRed.UseVisualStyleBackColor = true;
+            this.cbRed.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
+            // 
+            // bunifuPictureBox11
+            // 
+            this.bunifuPictureBox11.AllowFocused = false;
+            this.bunifuPictureBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox11.AutoSizeHeight = true;
+            this.bunifuPictureBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(66)))), ((int)(((byte)(159)))));
+            this.bunifuPictureBox11.BorderRadius = 12;
+            this.bunifuPictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox11.Image")));
+            this.bunifuPictureBox11.IsCircle = true;
+            this.bunifuPictureBox11.Location = new System.Drawing.Point(669, 8);
+            this.bunifuPictureBox11.Name = "bunifuPictureBox11";
+            this.bunifuPictureBox11.Size = new System.Drawing.Size(25, 25);
+            this.bunifuPictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox11.TabIndex = 31;
+            this.bunifuPictureBox11.TabStop = false;
+            this.bunifuPictureBox11.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // cbBlack
+            // 
+            this.cbBlack.AutoSize = true;
+            this.cbBlack.Location = new System.Drawing.Point(187, 77);
+            this.cbBlack.Name = "cbBlack";
+            this.cbBlack.Size = new System.Drawing.Size(18, 17);
+            this.cbBlack.TabIndex = 42;
+            this.cbBlack.UseVisualStyleBackColor = true;
+            this.cbBlack.CheckedChanged += new System.EventHandler(this.cbBlack_CheckedChanged);
+            this.cbBlack.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(583, 47);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(40, 16);
+            this.label28.TabIndex = 30;
+            this.label28.Text = "Hồng";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(12, 26);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(83, 28);
+            this.label18.TabIndex = 13;
+            this.label18.Text = "Màu sắc";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuPictureBox12
+            // 
+            this.bunifuPictureBox12.AllowFocused = false;
+            this.bunifuPictureBox12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox12.AutoSizeHeight = true;
+            this.bunifuPictureBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(114)))), ((int)(((byte)(143)))));
+            this.bunifuPictureBox12.BorderRadius = 12;
+            this.bunifuPictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox12.Image")));
+            this.bunifuPictureBox12.IsCircle = true;
+            this.bunifuPictureBox12.Location = new System.Drawing.Point(588, 8);
+            this.bunifuPictureBox12.Name = "bunifuPictureBox12";
+            this.bunifuPictureBox12.Size = new System.Drawing.Size(25, 25);
+            this.bunifuPictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox12.TabIndex = 29;
+            this.bunifuPictureBox12.TabStop = false;
+            this.bunifuPictureBox12.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // bunifuPictureBox5
+            // 
+            this.bunifuPictureBox5.AllowFocused = false;
+            this.bunifuPictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox5.AutoSizeHeight = true;
+            this.bunifuPictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(53)))), ((int)(((byte)(43)))));
+            this.bunifuPictureBox5.BackgroundImage = global::StoreManagerPro.Properties.Resources.Red;
+            this.bunifuPictureBox5.BorderRadius = 12;
+            this.bunifuPictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox5.Image")));
+            this.bunifuPictureBox5.IsCircle = true;
+            this.bunifuPictureBox5.Location = new System.Drawing.Point(264, 8);
+            this.bunifuPictureBox5.Name = "bunifuPictureBox5";
+            this.bunifuPictureBox5.Size = new System.Drawing.Size(25, 25);
+            this.bunifuPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox5.TabIndex = 15;
+            this.bunifuPictureBox5.TabStop = false;
+            this.bunifuPictureBox5.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(502, 47);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(34, 16);
+            this.label23.TabIndex = 26;
+            this.label23.Text = "Xám";
+            // 
+            // bunifuPictureBox4
+            // 
+            this.bunifuPictureBox4.AllowFocused = false;
+            this.bunifuPictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox4.AutoSizeHeight = true;
+            this.bunifuPictureBox4.BackColor = System.Drawing.Color.Black;
+            this.bunifuPictureBox4.BorderRadius = 12;
+            this.bunifuPictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox4.Image")));
+            this.bunifuPictureBox4.IsCircle = true;
+            this.bunifuPictureBox4.Location = new System.Drawing.Point(183, 8);
+            this.bunifuPictureBox4.Name = "bunifuPictureBox4";
+            this.bunifuPictureBox4.Size = new System.Drawing.Size(25, 25);
+            this.bunifuPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox4.TabIndex = 1;
+            this.bunifuPictureBox4.TabStop = false;
+            this.bunifuPictureBox4.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // bunifuPictureBox7
+            // 
+            this.bunifuPictureBox7.AllowFocused = false;
+            this.bunifuPictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox7.AutoSizeHeight = true;
+            this.bunifuPictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
+            this.bunifuPictureBox7.BorderRadius = 12;
+            this.bunifuPictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox7.Image")));
+            this.bunifuPictureBox7.IsCircle = true;
+            this.bunifuPictureBox7.Location = new System.Drawing.Point(507, 8);
+            this.bunifuPictureBox7.Name = "bunifuPictureBox7";
+            this.bunifuPictureBox7.Size = new System.Drawing.Size(25, 25);
+            this.bunifuPictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox7.TabIndex = 25;
+            this.bunifuPictureBox7.TabStop = false;
+            this.bunifuPictureBox7.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(181, 47);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(31, 16);
+            this.label20.TabIndex = 14;
+            this.label20.Text = "Đen";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(421, 47);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(35, 16);
+            this.label24.TabIndex = 24;
+            this.label24.Text = "Cam";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(263, 47);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(24, 16);
+            this.label21.TabIndex = 16;
+            this.label21.Text = "Đỏ";
+            // 
+            // bunifuPictureBox8
+            // 
+            this.bunifuPictureBox8.AllowFocused = false;
+            this.bunifuPictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox8.AutoSizeHeight = true;
+            this.bunifuPictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(107)))), ((int)(((byte)(38)))));
+            this.bunifuPictureBox8.BorderRadius = 12;
+            this.bunifuPictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox8.Image")));
+            this.bunifuPictureBox8.IsCircle = true;
+            this.bunifuPictureBox8.Location = new System.Drawing.Point(426, 8);
+            this.bunifuPictureBox8.Name = "bunifuPictureBox8";
+            this.bunifuPictureBox8.Size = new System.Drawing.Size(25, 25);
+            this.bunifuPictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox8.TabIndex = 23;
+            this.bunifuPictureBox8.TabStop = false;
+            this.bunifuPictureBox8.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // bunifuPictureBox6
+            // 
+            this.bunifuPictureBox6.AllowFocused = false;
+            this.bunifuPictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox6.AutoSizeHeight = true;
+            this.bunifuPictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(213)))), ((int)(((byte)(51)))));
+            this.bunifuPictureBox6.BorderRadius = 12;
+            this.bunifuPictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox6.Image")));
+            this.bunifuPictureBox6.IsCircle = true;
+            this.bunifuPictureBox6.Location = new System.Drawing.Point(345, 8);
+            this.bunifuPictureBox6.Name = "bunifuPictureBox6";
+            this.bunifuPictureBox6.Size = new System.Drawing.Size(25, 25);
+            this.bunifuPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox6.TabIndex = 19;
+            this.bunifuPictureBox6.TabStop = false;
+            this.bunifuPictureBox6.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(340, 47);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(39, 16);
+            this.label22.TabIndex = 20;
+            this.label22.Text = "Vàng";
             // 
             // tabPage3
             // 
@@ -1272,11 +2000,11 @@
             this.tabPage6.Controls.Add(this.label15);
             this.tabPage6.Controls.Add(this.label12);
             this.tabPage6.Controls.Add(this.label13);
-            this.tabPage6.Controls.Add(this.bunifuToggleSwitch1);
             this.tabPage6.Controls.Add(this.label11);
             this.tabPage6.Controls.Add(this.label10);
-            this.tabPage6.Controls.Add(this.ToggleSwitchDarkMode);
             this.tabPage6.Controls.Add(this.panel7);
+            this.tabPage6.Controls.Add(this.bunifuToggleSwitch1);
+            this.tabPage6.Controls.Add(this.ToggleSwitchDarkMode);
             this.tabPage6.Location = new System.Drawing.Point(4, 4);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
@@ -1490,6 +2218,35 @@
             this.label13.Text = "Notifications";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(155, 105);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(39, 28);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Off";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(70, 64);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(178, 28);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Dark Theme Mode ";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel7
+            // 
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1070, 264);
+            this.panel7.TabIndex = 18;
+            // 
             // bunifuToggleSwitch1
             // 
             this.bunifuToggleSwitch1.Animation = 5;
@@ -1533,28 +2290,6 @@
             toggleState3.BorderThicknessInner = 1;
             this.bunifuToggleSwitch1.ToggleStateOn = toggleState3;
             this.bunifuToggleSwitch1.Value = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(155, 105);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(39, 28);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Off";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(70, 64);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(178, 28);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Dark Theme Mode ";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ToggleSwitchDarkMode
             // 
@@ -1600,13 +2335,6 @@
             this.ToggleSwitchDarkMode.ToggleStateOn = toggleState6;
             this.ToggleSwitchDarkMode.Value = false;
             // 
-            // panel7
-            // 
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1070, 264);
-            this.panel7.TabIndex = 18;
-            // 
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.flowLayoutProduct);
@@ -1648,6 +2376,23 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBAvatar)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox6)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -1747,5 +2492,54 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label lbLogout;
         private System.Windows.Forms.PictureBox pBLogout;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox4;
+        private System.Windows.Forms.Label label25;
+        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox9;
+        private System.Windows.Forms.Label label26;
+        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox10;
+        private System.Windows.Forms.Label label27;
+        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox11;
+        private System.Windows.Forms.Label label28;
+        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox12;
+        private System.Windows.Forms.Label label23;
+        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox7;
+        private System.Windows.Forms.Label label24;
+        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox8;
+        private System.Windows.Forms.Label label22;
+        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox6;
+        private System.Windows.Forms.Label label21;
+        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox5;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.CheckBox cbWhite;
+        private System.Windows.Forms.CheckBox cbBrown;
+        private System.Windows.Forms.CheckBox cbPurple;
+        private System.Windows.Forms.CheckBox cbPink;
+        private System.Windows.Forms.CheckBox cbGray;
+        private System.Windows.Forms.CheckBox cbOrange;
+        private System.Windows.Forms.CheckBox cbYellow;
+        private System.Windows.Forms.CheckBox cbRed;
+        private System.Windows.Forms.CheckBox cbBlack;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.CheckBox cbSizeXl;
+        private System.Windows.Forms.CheckBox cbSizeL;
+        private System.Windows.Forms.CheckBox cbSizeM;
+        private System.Windows.Forms.CheckBox cbSizeS;
+        private System.Windows.Forms.Label label30;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.CheckBox cbAbove750;
+        private System.Windows.Forms.CheckBox cbMiddle;
+        private System.Windows.Forms.CheckBox cbBelow350;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutFiltered;
     }
 }

@@ -16,7 +16,7 @@ namespace StoreManagerPro
         private Dictionary<string, Color> colorMap; // Map color names to Color objects
         private int productId;  // Store productId for CartItem
         private FlowLayoutPanel flowLayoutCart; // Reference to the parent's FlowLayoutPanel
-        public ItemDetail(int productId, FlowLayoutPanel flowLayoutCart)
+        public ItemDetail(int productId, FlowLayoutPanel flowLayoutCart = null)
         {
             InitializeComponent();
             this.productId = productId;

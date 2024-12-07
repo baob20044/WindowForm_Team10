@@ -17,7 +17,9 @@ namespace StoreManagerPro
         private Timer fadeTimer; // Dùng cho chuyển trang
 
         private List<ShopItem> shopItems; // All items
+        private List<ShopItem> shopItemsCategory; // All items
         private List<ShopItem> filteredItems; // Filtered items based on search
+        private List<ShopItem> filteredItemsCategory; 
         private int currentPage = 0;      // Current page index
         private int pageSize = 15;         // Number of items per page
         private int totalProduct = 29;
@@ -30,6 +32,7 @@ namespace StoreManagerPro
             // Initialize products and load the first page
             InitializeShopItems();
             filteredItems = new List<ShopItem>(shopItems); // Initially, no filtering
+            filteredItemsCategory = new List<ShopItem>(shopItemsCategory); // Initially, no filtering
             LoadPage(0);
             UpdateCartTotals();
         }
@@ -38,14 +41,19 @@ namespace StoreManagerPro
         private void InitializeShopItems()
         {
             shopItems = new List<ShopItem>();
-
+            shopItemsCategory = new List<ShopItem>();
             for (int i = 1; i <= totalProduct; i++) // Inclusive range to handle all products
             {
                 var shopItem = new ShopItem(i);
                 shopItem.OnShopItemClick += HandleShopItemClick; // Subscribe to the click event
                 shopItems.Add(shopItem); // Add to the list
+
+                var shopItemCategory = new ShopItem(i);
+                shopItem.OnShopItemClick += HandleShopItemClick; // Subscribe to the click event
+                shopItemsCategory.Add(shopItemCategory); // Add to the list
             }
         }
+
 
         // Khi chọn product thì hiện sản phẩm
         private void HandleShopItemClick(int productId) 
@@ -60,8 +68,7 @@ namespace StoreManagerPro
         // Load trang gồm nhiều sản phảm để lựa chọn + load theo trang dung` filteredItems
         private void LoadPage(int pageIndex) /* Home Page */
         {
-            flowLayout.Controls.Clear(); // Clear existing controls
-
+            flowLayout.Controls.Clear(); // Clear existing controlsy
             // Calculate the range of items to display
             int startIndex = pageIndex * pageSize;
             int endIndex = Math.Min(startIndex + pageSize, filteredItems.Count);
@@ -71,7 +78,10 @@ namespace StoreManagerPro
             {
                 flowLayout.Controls.Add(filteredItems[i]);
             }
-
+            for (int i = 0; i < totalProduct; i++)
+            {
+                flowLayoutFiltered.Controls.Add(filteredItemsCategory[i]);
+            }
             // Update navigation buttons
             btnPrevious.Enabled = pageIndex > 0;
             btnNext.Enabled = endIndex < filteredItems.Count;
@@ -223,6 +233,75 @@ namespace StoreManagerPro
         private void lbLogout_Click(object sender, EventArgs e) /* Setting Page */
         {
             NavigateToLoginPage();
+        }
+
+        private void ApplyCategoryFilters()
+        {
+            var selectedColors = new List<string>();
+            var selectedSizes = new List<string>();
+            decimal minPrice = 0, maxPrice = decimal.MaxValue;
+
+            // Collect selected colors
+            if (cbRed.Checked) selectedColors.Add("Red");
+            if (cbBlack.Checked) selectedColors.Add("Black");
+            if (cbYellow.Checked) selectedColors.Add("Yellow");
+            if (cbGray.Checked) selectedColors.Add("Gray");
+            if (cbPink.Checked) selectedColors.Add("Pink");
+            if (cbPurple.Checked) selectedColors.Add("Purple");
+            if (cbBrown.Checked) selectedColors.Add("Brown");
+            if (cbWhite.Checked) selectedColors.Add("White");
+
+            // Collect selected sizes
+            if (cbSizeS.Checked) selectedSizes.Add("S");
+            if (cbSizeM.Checked) selectedSizes.Add("M");
+            if (cbSizeL.Checked) selectedSizes.Add("L");
+            if (cbSizeXl.Checked) selectedSizes.Add("XL");
+
+            // Determine price range
+            if (cbBelow350.Checked)
+            {
+                minPrice = 0;
+                maxPrice = 349999;
+            }
+            if (cbMiddle.Checked)
+            {
+                minPrice = 350000;
+                maxPrice = 749999;
+            }
+            if (cbAbove750.Checked)
+            {
+                minPrice = 750000;
+                maxPrice = decimal.MaxValue;
+            }
+
+            // Apply filters to the product list (shopItemsCategory)
+            filteredItemsCategory = shopItemsCategory
+                .Where(shopItem =>
+                    shopItem.LoadedProduct != null && // Ensure the product is loaded
+                    (selectedColors.Count == 0 ||
+                     selectedColors.All(color => shopItem.LoadedProduct.Colors.Any(c => c.Name == color))) && // Ensure the product contains all selected colors
+                    (selectedSizes.Count == 0 ||
+                     selectedSizes.All(size => shopItem.LoadedProduct.Sizes.Any(s => s.SizeValue == size))) && // Ensure the product contains all selected sizes
+                    shopItem.LoadedProduct.Price >= minPrice &&
+                    shopItem.LoadedProduct.Price <= maxPrice)
+                .ToList();
+        }
+
+        private void LoadFilteredItems()
+        {
+            flowLayoutFiltered.Controls.Clear(); // Clear previous controls
+
+            // Add filtered items to the flow layout
+            foreach (var item in filteredItemsCategory)
+            {
+                flowLayoutFiltered.Controls.Add(item);
+            }
+        }
+
+        private void cbBlack_CheckedChanged(object sender, EventArgs e)
+        {
+            ApplyCategoryFilters();  // Apply the filter logic
+            LoadFilteredItems();     // Update the UI with filtered items
         }
     }
 }
