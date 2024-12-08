@@ -56,7 +56,7 @@ namespace StoreManagerPro
 
 
         // Khi chọn product thì hiện sản phẩm
-        private void HandleShopItemClick(int productId) 
+        public void HandleShopItemClick(int productId) 
         {
             // Navigate to the "Product" page and add the ItemDetail
             pages.SetPage("Product");
@@ -204,31 +204,7 @@ namespace StoreManagerPro
         }
         private void FadeToLogin(object sender, EventArgs e) /* Setting Page */
         {
-            if (this.Opacity > 0)
-            {
-                this.Opacity -= 0.1; // Faster fade with larger decrement
-            }
-            else
-            {
-                fadeTimer.Stop();
-                fadeTimer.Dispose();
 
-                // Hide the current form before opening the SignupForm
-                this.Hide();
-
-                // Open SignupForm
-                LoginForm loginForm = new LoginForm();
-                loginForm.StartPosition = FormStartPosition.CenterScreen;
-                loginForm.Location = this.Location;
-                loginForm.ShowDialog();  // Show the new form
-
-                // After showing the new form, dispose of the current form
-                this.Close(); // Close the form
-                this.Dispose(); // Dispose of the form's resources
-
-                // Ensure the old form is completely removed from memory and taskbar
-                Application.DoEvents(); // Allow UI to refresh and clear pending events
-            }
         }
         private void lbLogout_Click(object sender, EventArgs e) /* Setting Page */
         {
@@ -245,8 +221,9 @@ namespace StoreManagerPro
             if (cbRed.Checked) selectedColors.Add("Red");
             if (cbBlack.Checked) selectedColors.Add("Black");
             if (cbYellow.Checked) selectedColors.Add("Yellow");
+            if (cbOrange.Checked) selectedColors.Add("Orange");
             if (cbGray.Checked) selectedColors.Add("Gray");
-            if (cbPink.Checked) selectedColors.Add("Pink");
+            if (cbPink.Checked) selectedColors.Add("LightPink");
             if (cbPurple.Checked) selectedColors.Add("Purple");
             if (cbBrown.Checked) selectedColors.Add("Brown");
             if (cbWhite.Checked) selectedColors.Add("White");
@@ -273,9 +250,13 @@ namespace StoreManagerPro
                 minPrice = 750000;
                 maxPrice = decimal.MaxValue;
             }
-
-            // Apply filters to the product list (shopItemsCategory)
-            filteredItemsCategory = shopItemsCategory
+            if(cbBelow350.Checked && cbMiddle.Checked || cbAbove750.Checked && cbMiddle.Checked || cbBelow350.Checked && cbAbove750.Checked)
+            {
+                minPrice = decimal.MaxValue;
+                maxPrice = decimal.MaxValue;
+            }
+                // Apply filters to the product list (shopItemsCategory)
+                filteredItemsCategory = shopItemsCategory
                 .Where(shopItem =>
                     shopItem.LoadedProduct != null && // Ensure the product is loaded
                     (selectedColors.Count == 0 ||

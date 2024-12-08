@@ -19,6 +19,7 @@ namespace StoreManagerPro
         public int ProductId { get; } // To hold the product ID
         public string SelectedColorName { get; set; } // Selected color
         public string SelectedSize { get; set; }      // Selected size
+        public event Action<int> OnShopItemClick; // Event to notify when the item is clicked
         public CartItem(int productId, string selectedColorName, string selectedSize)
         {
             InitializeComponent();
@@ -27,6 +28,12 @@ namespace StoreManagerPro
 
             SelectedColorName = selectedColorName;
             SelectedSize = selectedSize;
+
+            this.Click += (s, e) => OnShopItemClick?.Invoke(ProductId);
+            foreach (Control control in this.Controls)
+            {
+                control.Click += (s, e) => OnShopItemClick?.Invoke(ProductId);
+            }
         }
         private async void LoadProductData(int productId)
         {
