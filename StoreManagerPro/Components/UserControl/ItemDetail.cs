@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
+using StoreManagerPro.Components;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static StoreManagerPro.CartItem;
 
 namespace StoreManagerPro
 {
@@ -147,14 +149,31 @@ namespace StoreManagerPro
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
             bool productExistsInCart = false;
+
+            // Validate dropdown selections
             string selectedColorName = DropdownColor.SelectedItem?.ToString();
             string selectedSize = DropdownSize.SelectedItem?.ToString();
+            if (string.IsNullOrEmpty(selectedColorName) || string.IsNullOrEmpty(selectedSize))
+            {
+                MessageBox.Show("Please select a color and size before adding to the cart.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Find the parent form and cast it as MainPage
+            var mainPage = this.FindForm() as MainPage;
+            if (mainPage == null)
+            {
+                MessageBox.Show("Unable to locate the main page. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Check if the product already exists in the cart
             foreach (Control control in flowLayoutCart.Controls)
             {
                 if (control is CartItem existingCartItem &&
                     existingCartItem.ProductId == productId &&
                     existingCartItem.SelectedColorName == selectedColorName &&
-                    existingCartItem.SelectedSize == selectedSize) // Compare color and size
+                    existingCartItem.SelectedSize == selectedSize)
                 {
                     existingCartItem.NumericValue += NumericUpDown1.Value;
                     productExistsInCart = true;
@@ -162,9 +181,9 @@ namespace StoreManagerPro
                 }
             }
 
+            // If the product does not exist, create a new CartItem and add it to the cart
             if (!productExistsInCart)
             {
-                // Add new item to the cart with selected color and size
                 CartItem newCartItem = new CartItem(productId, selectedColorName, selectedSize)
                 {
                     ItemLabel = lbName.Text,
@@ -172,27 +191,49 @@ namespace StoreManagerPro
                     ProductImage = pBProduct.Image,
                     NumericValue = NumericUpDown1.Value
                 };
+
+                // Assign event handler to newCartItem
+                newCartItem.Click += (s, args) => mainPage.HandleShopItemClick(newCartItem.ProductId);
+
                 flowLayoutCart.Controls.Add(newCartItem);
             }
 
-            var mainPage = this.FindForm() as MainPage;
-            mainPage?.UpdateCartTotals();
-            MessageBox.Show($"Added {lbName.Text} to the cart.");
+            // Update cart totals and notify the user
+            mainPage.UpdateCartTotals();
+            MessageBox.Show($"Added {lbName.Text} to the cart.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
 
 
 
         private void btnBuy_Click(object sender, EventArgs e)
         {
             bool productExistsInCart = false;
+
+            // Validate dropdown selections
             string selectedColorName = DropdownColor.SelectedItem?.ToString();
             string selectedSize = DropdownSize.SelectedItem?.ToString();
+            if (string.IsNullOrEmpty(selectedColorName) || string.IsNullOrEmpty(selectedSize))
+            {
+                MessageBox.Show("Please select a color and size before adding to the cart.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Find the parent form and cast it as MainPage
+            var mainPage = this.FindForm() as MainPage;
+            if (mainPage == null)
+            {
+                MessageBox.Show("Unable to locate the main page. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Check if the product already exists in the cart
             foreach (Control control in flowLayoutCart.Controls)
             {
                 if (control is CartItem existingCartItem &&
                     existingCartItem.ProductId == productId &&
                     existingCartItem.SelectedColorName == selectedColorName &&
-                    existingCartItem.SelectedSize == selectedSize) // Compare color and size
+                    existingCartItem.SelectedSize == selectedSize)
                 {
                     existingCartItem.NumericValue += NumericUpDown1.Value;
                     productExistsInCart = true;
@@ -200,9 +241,9 @@ namespace StoreManagerPro
                 }
             }
 
+            // If the product does not exist, create a new CartItem and add it to the cart
             if (!productExistsInCart)
             {
-                // Add new item to the cart with selected color and size
                 CartItem newCartItem = new CartItem(productId, selectedColorName, selectedSize)
                 {
                     ItemLabel = lbName.Text,
@@ -210,11 +251,15 @@ namespace StoreManagerPro
                     ProductImage = pBProduct.Image,
                     NumericValue = NumericUpDown1.Value
                 };
+
+                // Assign event handler to newCartItem
+                newCartItem.Click += (s, args) => mainPage.HandleShopItemClick(newCartItem.ProductId);
+                
                 flowLayoutCart.Controls.Add(newCartItem);
             }
 
-            var mainPage = this.FindForm() as MainPage;
-            mainPage?.UpdateCartTotals();
+            // Update cart totals and notify the user
+            mainPage.UpdateCartTotals();
             mainPage?.ChangeToCartPage();
         }
 
