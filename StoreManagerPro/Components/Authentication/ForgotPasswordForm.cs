@@ -1,5 +1,6 @@
 ﻿using RestSharp;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace StoreManagerPro.Components.Authentication
@@ -10,6 +11,7 @@ namespace StoreManagerPro.Components.Authentication
         public ForgotPasswordForm()
         {
             InitializeComponent();
+            Icon = new Icon(@"..\..\Resources\Logo-Yody-Yellow-1024x878.ico");
         }
 
         private async void BtnSubmit_Click(object sender, EventArgs e)

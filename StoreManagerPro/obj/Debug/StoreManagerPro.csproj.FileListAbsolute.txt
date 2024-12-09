@@ -48,3 +48,15 @@ D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\bin\Debug\Bunifu.UI.Wi
 D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\obj\Debug\StoreManagerPro.CartItem.resources
 D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\bin\Debug\Bunifu.UI.WinForms.BunifuToggleSwitch.dll
 D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\obj\Debug\StoreManagerPro.Components.Authentication.ForgotPasswordForm.resources
+D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\obj\Debug\StoreManagerPro.AdminMainPage.resources
+D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\obj\Debug\StoreManagerPro.Components.AdminControl.CategoryManage.resources
+D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\obj\Debug\StoreManagerPro.Components.AdminControl.ProductManage.resources
+D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\bin\Debug\Bunifu.UI.WinForms.BunifuPanel.dll
+D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\obj\Debug\StoreManagerPro.Components.AdminControl.AdminHome.resources
+D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\obj\Debug\StoreManagerPro.Components.AdminControl.SizeManage.resources
+D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\obj\Debug\StoreManagerPro.Components.AdminControl.CustomerManage.resources
+D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\obj\Debug\StoreManagerPro.Components.AdminControl.ColorManage.resources
+D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\obj\Debug\StoreManagerPro.Components.AdminControl.OrderDetailManage.resources
+D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\obj\Debug\StoreManagerPro.Components.AdminControl.OrderManage.resources
+D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\obj\Debug\StoreManagerPro.Components.AdminControl.ProviderManage.resources
+D:\Code\Bai_tap_thay_Toan\StoreManagerPro\StoreManagerPro\obj\Debug\StoreManagerPro.Components.AdminControl.SubcategoryManage.resources
