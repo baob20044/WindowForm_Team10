@@ -119,7 +119,7 @@ namespace StoreManagerPro
 
                 // Open the LoginForm after fading out
                 LoginForm loginForm = new LoginForm();
-                loginForm.StartPosition = FormStartPosition.Manual;
+                loginForm.StartPosition = FormStartPosition.CenterScreen;
                 loginForm.Location = this.Location; // Preserve the form's position
                 loginForm.ShowDialog(); // Show LoginForm modally
 

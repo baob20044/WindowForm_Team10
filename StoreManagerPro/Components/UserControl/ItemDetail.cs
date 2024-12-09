@@ -46,7 +46,7 @@ namespace StoreManagerPro
                     ShowFallbackImage();
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 ShowFallbackImage();
             }

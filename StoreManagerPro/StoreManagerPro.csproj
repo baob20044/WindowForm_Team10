@@ -70,6 +70,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuPages">
       <HintPath>..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
       <HintPath>..\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
     </Reference>
@@ -139,6 +142,72 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminMainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMainPage.Designer.cs">
+      <DependentUpon>AdminMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AdminControl\AdminHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AdminControl\AdminHome.Designer.cs">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AdminControl\CategoryManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AdminControl\CategoryManage.Designer.cs">
+      <DependentUpon>CategoryManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AdminControl\ColorManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AdminControl\ColorManage.Designer.cs">
+      <DependentUpon>ColorManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AdminControl\CustomerManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AdminControl\CustomerManage.Designer.cs">
+      <DependentUpon>CustomerManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AdminControl\OrderDetailManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AdminControl\OrderDetailManage.Designer.cs">
+      <DependentUpon>OrderDetailManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AdminControl\OrderManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AdminControl\OrderManage.Designer.cs">
+      <DependentUpon>OrderManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AdminControl\ProductManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AdminControl\ProductManage.Designer.cs">
+      <DependentUpon>ProductManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AdminControl\ProviderManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AdminControl\ProviderManage.Designer.cs">
+      <DependentUpon>ProviderManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AdminControl\SizeManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AdminControl\SizeManage.Designer.cs">
+      <DependentUpon>SizeManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AdminControl\SubcategoryManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\AdminControl\SubcategoryManage.Designer.cs">
+      <DependentUpon>SubcategoryManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\Authentication\ForgotPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +252,39 @@
     <Compile Include="Components\Authentication\SignupForm.Designer.cs">
       <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminMainPage.resx">
+      <DependentUpon>AdminMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AdminControl\AdminHome.resx">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AdminControl\CategoryManage.resx">
+      <DependentUpon>CategoryManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AdminControl\ColorManage.resx">
+      <DependentUpon>ColorManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AdminControl\CustomerManage.resx">
+      <DependentUpon>CustomerManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AdminControl\OrderDetailManage.resx">
+      <DependentUpon>OrderDetailManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AdminControl\OrderManage.resx">
+      <DependentUpon>OrderManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AdminControl\ProductManage.resx">
+      <DependentUpon>ProductManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AdminControl\ProviderManage.resx">
+      <DependentUpon>ProviderManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AdminControl\SizeManage.resx">
+      <DependentUpon>SizeManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\AdminControl\SubcategoryManage.resx">
+      <DependentUpon>SubcategoryManage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\Authentication\ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +360,7 @@
     <Content Include="Resources\Logo-Yody-Yellow-1024x878.png" />
     <Content Include="Resources\menu_woman.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
