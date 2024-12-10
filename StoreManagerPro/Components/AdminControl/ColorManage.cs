@@ -287,6 +287,7 @@ namespace StoreManagerPro.Components.AdminControl
                 {
                     ColorManage_Load(sender, e);
                     MessageBox.Show("Color added successfully!");
+                    flowLayoutAdd.Visible = false;
                 }
                 else
                 {

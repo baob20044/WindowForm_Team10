@@ -60,7 +60,7 @@ namespace StoreManagerPro.Components.AdminControl
 
             // Define columns
             DataGridViewSize.Columns.Add("sizeId", "Size Id");
-            DataGridViewSize.Columns.Add("sizeValue", "Size Value");
+            DataGridViewSize.Columns.Add("sizeValue", "Value");
         }
         private async Task<List<Size>> FetchSizesAsync()
         {
@@ -109,7 +109,7 @@ namespace StoreManagerPro.Components.AdminControl
 
             // Define columns
             DataGridViewSize.Columns.Add("sizeId", "Size ID");
-            DataGridViewSize.Columns.Add("sizeValue", "Size Value");
+            DataGridViewSize.Columns.Add("sizeValue", "Value");
 
             // Populate rows
             foreach (var size in pagedSizes)
@@ -164,13 +164,18 @@ namespace StoreManagerPro.Components.AdminControl
             flowLayoutAdd.Visible = false;
         }
 
+        private void btnCloseEdit_Click(object sender, EventArgs e)
+        {
+            flowLayoutEdit.Visible = false;
+        }
+
         private async void txtSave_Click(object sender, EventArgs e)
         {
             // Get the name from the text box and selected target customer ID from ComboBox
             string sizeName = txtSize.Text;
 
             // Validate inputs
-            if (string.IsNullOrEmpty(sizeName) || string.IsNullOrEmpty(sizeName))
+            if (string.IsNullOrEmpty(sizeName))
             {
                 MessageBox.Show("Please provide both the size name.");
                 return;
@@ -196,6 +201,7 @@ namespace StoreManagerPro.Components.AdminControl
                 {
                     SizeManage_Load(sender, e);
                     MessageBox.Show("Size added successfully!");
+                    flowLayoutAdd.Visible = false;
                 }
                 else
                 {
@@ -219,10 +225,10 @@ namespace StoreManagerPro.Components.AdminControl
             else
             {
                 // Filter colors based on the search term
-                var filteredColors = allSizes.Where(c => c.SizeValue.ToLower().Contains(searchTerm)).ToList();
+                var filteredSizes = allSizes.Where(c => c.SizeValue.ToLower().Contains(searchTerm)).ToList();
 
                 // Load filtered colors into the DataGridView
-                LoadSizesIntoDataGridView(filteredColors);
+                LoadSizesIntoDataGridView(filteredSizes);
             }
         }
         private void LoadSizesIntoDataGridView(List<Size> sizes)
@@ -233,18 +239,13 @@ namespace StoreManagerPro.Components.AdminControl
 
             // Define columns
             DataGridViewSize.Columns.Add("sizeId", "Size ID");
-            DataGridViewSize.Columns.Add("sizeValue", "Size Value");
+            DataGridViewSize.Columns.Add("sizeValue", "Value");
 
             // Populate rows
             foreach (var size in sizes)
             {
                 DataGridViewSize.Rows.Add(size.SizeId, size.SizeValue);
             }
-        }
-
-        private void btnCloseEdit_Click(object sender, EventArgs e)
-        {
-            flowLayoutEdit.Visible = false;
         }
 
         private async void btnSaveEdit_Click(object sender, EventArgs e)
