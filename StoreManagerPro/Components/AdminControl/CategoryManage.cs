@@ -224,6 +224,7 @@ namespace StoreManagerPro.Components.AdminControl
                 {
                     CategoryManage_Load(sender, e);
                     MessageBox.Show("Category added successfully!");
+                    flowLayoutAdd.Visible = false;
                 }
                 else
                 {

@@ -49,7 +49,7 @@ namespace StoreManagerPro
                 shopItems.Add(shopItem); // Add to the list
 
                 var shopItemCategory = new ShopItem(i);
-                shopItem.OnShopItemClick += HandleShopItemClick; // Subscribe to the click event
+                shopItemCategory.OnShopItemClick += HandleShopItemClick; // Subscribe to the click event
                 shopItemsCategory.Add(shopItemCategory); // Add to the list
             }
         }
