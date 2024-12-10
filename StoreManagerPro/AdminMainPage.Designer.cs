@@ -41,7 +41,6 @@
             this.controlboxTurnOff = new Guna.UI2.WinForms.Guna2ControlBox();
             this.controlboxMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSubcategory = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnProvider = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
@@ -52,6 +51,7 @@
             this.btnCustomer = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnCategory = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnProduct = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -103,14 +103,6 @@
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(282, 891);
             this.guna2Panel1.TabIndex = 8;
-            // 
-            // flowLayoutPanel
-            // 
-            this.flowLayoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(260, 3);
-            this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(1095, 951);
-            this.flowLayoutPanel.TabIndex = 14;
             // 
             // btnSubcategory
             // 
@@ -938,6 +930,14 @@
             this.btnProduct.UseDefaultRadiusAndThickness = true;
             this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
+            // flowLayoutPanel
+            // 
+            this.flowLayoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.flowLayoutPanel.Location = new System.Drawing.Point(260, 3);
+            this.flowLayoutPanel.Name = "flowLayoutPanel";
+            this.flowLayoutPanel.Size = new System.Drawing.Size(1095, 951);
+            this.flowLayoutPanel.TabIndex = 14;
+            // 
             // AdminMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -952,6 +952,7 @@
             this.Name = "AdminMainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMainPage";
+            this.Load += new System.EventHandler(this.AdminMainPage_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.ResumeLayout(false);
