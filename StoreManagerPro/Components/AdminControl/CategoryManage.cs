@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Guna.UI2.WinForms;
+using Newtonsoft.Json;
 using RestSharp;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,8 @@ namespace StoreManagerPro.Components.AdminControl
         private int currentPage = 1;          // Current page number
         private int pageSize = 10;            // Number of records per page
 
+        // Declare GunaTransition control
+
         public CategoryManage()
         {
             InitializeComponent();
@@ -33,7 +36,11 @@ namespace StoreManagerPro.Components.AdminControl
 
             cbTargetCustomer.SelectedIndex = 0; // Default to "1"
             LoadPage();
+
+            // Initialize txtSearch event handler
+            txtSearch.TextChanged += txtSearch_TextChanged;
         }
+
         public class Subcategory
         {
             public int SubcategoryId { get; set; }
@@ -62,6 +69,14 @@ namespace StoreManagerPro.Components.AdminControl
             DataGridViewCategory.AllowUserToAddRows = false; // Disable manual row addition
             DataGridViewCategory.ReadOnly = true;           // Make DataGridView read-only
             DataGridViewCategory.ContextMenuStrip = contextMenuStrip1;
+
+            // Enable gridlines
+            DataGridViewCategory.GridColor = System.Drawing.Color.Black; // Set gridline color to black (or any color you prefer)
+            DataGridViewCategory.CellBorderStyle = DataGridViewCellBorderStyle.Single; // Define gridline style
+
+            // Show row and column borders
+            DataGridViewCategory.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single; // Row header borders
+            DataGridViewCategory.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single; // Column header borders
         }
         private async Task<List<Category>> FetchCategoriesAsync()
         {
@@ -115,9 +130,15 @@ namespace StoreManagerPro.Components.AdminControl
             if (allCategories == null || allCategories.Count == 0)
                 return;
 
-            // Calculate start and end indexes
+            // Apply search filter if there's any input in txtSearch
+            string searchQuery = txtSearch.Text.ToLower();  // Case-insensitive search
+            var filteredCategories = string.IsNullOrEmpty(searchQuery)
+                ? allCategories
+                : allCategories.Where(c => c.Name.ToLower().Contains(searchQuery)).ToList();
+
+            // Calculate start and end indexes for pagination
             int skip = (currentPage - 1) * pageSize;
-            var pagedData = allCategories.Skip(skip).Take(pageSize).ToList();
+            var pagedData = filteredCategories.Skip(skip).Take(pageSize).ToList();
 
             // Clear and set up DataGridView
             DataGridViewCategory.Rows.Clear();
@@ -133,12 +154,13 @@ namespace StoreManagerPro.Components.AdminControl
             }
 
             // Update page number label
-            lbPageNumber.Text = $"{currentPage}/{Math.Ceiling((double)allCategories.Count / pageSize)}";
+            lbPageNumber.Text = $"{currentPage}/{Math.Ceiling((double)filteredCategories.Count / pageSize)}";
 
             // Enable/disable navigation buttons
             btnPrevious.Enabled = currentPage > 1;
-            btnNext.Enabled = currentPage < (int)Math.Ceiling((double)allCategories.Count / pageSize);
+            btnNext.Enabled = currentPage < (int)Math.Ceiling((double)filteredCategories.Count / pageSize);
         }
+
         private void btnPrevious_Click(object sender, EventArgs e)
         {
             if (currentPage > 1)
@@ -157,9 +179,10 @@ namespace StoreManagerPro.Components.AdminControl
             }
         }
 
-        private void btnAddCategory_Click(object sender, EventArgs e) {
+        private void btnAddCategory_Click(object sender, EventArgs e)
+        {
             flowLayoutAdd.Visible = true;
-            flowLayoutEdit.Visible = false;
+            flowLayoutEdit.Visible = false; 
         }
 
         private void txtClose_Click(object sender, EventArgs e)
@@ -199,6 +222,7 @@ namespace StoreManagerPro.Components.AdminControl
 
                 if (response.IsSuccessful)
                 {
+                    CategoryManage_Load(sender, e);
                     MessageBox.Show("Category added successfully!");
                 }
                 else
@@ -293,6 +317,7 @@ namespace StoreManagerPro.Components.AdminControl
 
                 if (response.IsSuccessful)
                 {
+                    CategoryManage_Load(sender,e);
                     MessageBox.Show("Category updated successfully!");
 
                     // Optionally, refresh the data grid or UI to reflect the updated category
@@ -309,5 +334,81 @@ namespace StoreManagerPro.Components.AdminControl
             }
         }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            flowLayoutAdd.Visible = false;
+            flowLayoutEdit.Visible = true;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (DataGridViewCategory.SelectedRows.Count > 0)
+            {
+                // Confirm deletion with the user (optional)
+                var confirmResult = MessageBox.Show(
+                    "Are you sure you want to delete the selected row?",
+                    "Confirm Delete",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (confirmResult == DialogResult.Yes)
+                {
+                    // Delete the selected row
+                    foreach (DataGridViewRow row in DataGridViewCategory.SelectedRows)
+                    {
+                        if (!row.IsNewRow) // Ensure we don't try to delete a new row placeholder
+                        {
+                            DataGridViewCategory.Rows.Remove(row);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to delete.", "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (DataGridViewCategory.SelectedRows.Count > 0)
+            {
+                // Confirm deletion with the user (optional)
+                var confirmResult = MessageBox.Show(
+                    "Are you sure you want to delete the selected row?",
+                    "Confirm Delete",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (confirmResult == DialogResult.Yes)
+                {
+                    // Delete the selected row
+                    foreach (DataGridViewRow row in DataGridViewCategory.SelectedRows)
+                    {
+                        if (!row.IsNewRow) // Ensure we don't try to delete a new row placeholder
+                        {
+                            DataGridViewCategory.Rows.Remove(row);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to delete.", "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void DataGridViewCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            currentPage = 1;
+            LoadPage();
+        }
     }
 }

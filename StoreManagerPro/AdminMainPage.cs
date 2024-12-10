@@ -27,7 +27,10 @@ namespace StoreManagerPro
         {
             InitializeComponent();
         }
-
+        private void AdminMainPage_Load(object sender, EventArgs e)
+        {
+            Icon = new Icon(@"..\..\Resources\Logo-Yody-Yellow-1024x878.ico");
+        }
         private void btnHome_Click(object sender, EventArgs e)
         {
             homeInterface = new AdminHome();
