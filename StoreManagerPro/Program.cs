@@ -17,7 +17,7 @@ namespace StoreManagerPro
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminMainPage());
+            Application.Run(new MainPage());
         }
     }
 }
