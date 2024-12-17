@@ -22,7 +22,7 @@ namespace StoreManagerPro
         private List<ShopItem> filteredItemsCategory; 
         private int currentPage = 0;      // Current page index
         private int pageSize = 15;         // Number of items per page
-        private int totalProduct = 5;
+        private int totalProduct = 50;
 
         public MainPage()
         {
