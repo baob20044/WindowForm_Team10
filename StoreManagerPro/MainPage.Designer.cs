@@ -259,10 +259,10 @@
             this.pages.Location = new System.Drawing.Point(307, 0);
             this.pages.Multiline = true;
             this.pages.Name = "pages";
-            this.pages.Page = this.tabPage1;
-            this.pages.PageIndex = 0;
-            this.pages.PageName = "tabPage1";
-            this.pages.PageTitle = "Home";
+            this.pages.Page = this.tabPage5;
+            this.pages.PageIndex = 4;
+            this.pages.PageName = "tabPage5";
+            this.pages.PageTitle = "User Profile";
             this.pages.SelectedIndex = 0;
             this.pages.Size = new System.Drawing.Size(1064, 965);
             this.pages.TabIndex = 13;
@@ -460,7 +460,7 @@
             this.flowLayoutFiltered.AutoScroll = true;
             this.flowLayoutFiltered.Location = new System.Drawing.Point(19, 478);
             this.flowLayoutFiltered.Name = "flowLayoutFiltered";
-            this.flowLayoutFiltered.Size = new System.Drawing.Size(1041, 282);
+            this.flowLayoutFiltered.Size = new System.Drawing.Size(1043, 282);
             this.flowLayoutFiltered.TabIndex = 54;
             this.flowLayoutFiltered.WrapContents = false;
             // 
@@ -596,6 +596,7 @@
             this.guna2TextBox4.Size = new System.Drawing.Size(44, 35);
             this.guna2TextBox4.TabIndex = 53;
             this.guna2TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.guna2TextBox4.TextChanged += new System.EventHandler(this.guna2TextBox4_TextChanged);
             // 
             // guna2TextBox2
             // 
@@ -623,6 +624,7 @@
             this.guna2TextBox2.Size = new System.Drawing.Size(44, 35);
             this.guna2TextBox2.TabIndex = 52;
             this.guna2TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.guna2TextBox2.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             // 
             // guna2TextBox1
             // 
@@ -650,6 +652,7 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(44, 35);
             this.guna2TextBox1.TabIndex = 51;
             this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // guna2TextBox3
             // 
@@ -677,6 +680,7 @@
             this.guna2TextBox3.Size = new System.Drawing.Size(44, 35);
             this.guna2TextBox3.TabIndex = 50;
             this.guna2TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.guna2TextBox3.TextChanged += new System.EventHandler(this.guna2TextBox3_TextChanged);
             // 
             // cbSizeXl
             // 
@@ -696,6 +700,7 @@
             this.cbSizeL.Size = new System.Drawing.Size(18, 17);
             this.cbSizeL.TabIndex = 45;
             this.cbSizeL.UseVisualStyleBackColor = true;
+            this.cbSizeL.CheckedChanged += new System.EventHandler(this.cbSizeL_CheckedChanged);
             this.cbSizeL.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
             // 
             // cbSizeM
@@ -706,6 +711,7 @@
             this.cbSizeM.Size = new System.Drawing.Size(18, 17);
             this.cbSizeM.TabIndex = 44;
             this.cbSizeM.UseVisualStyleBackColor = true;
+            this.cbSizeM.CheckedChanged += new System.EventHandler(this.cbSizeM_CheckedChanged);
             this.cbSizeM.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
             // 
             // cbSizeS
@@ -716,6 +722,7 @@
             this.cbSizeS.Size = new System.Drawing.Size(18, 17);
             this.cbSizeS.TabIndex = 43;
             this.cbSizeS.UseVisualStyleBackColor = true;
+            this.cbSizeS.CheckedChanged += new System.EventHandler(this.cbSizeS_CheckedChanged);
             this.cbSizeS.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
             // 
             // label30
@@ -739,6 +746,7 @@
             this.label19.TabIndex = 12;
             this.label19.Text = "Bộ lọc";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // panel9
             // 
@@ -775,6 +783,7 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1041, 126);
             this.panel9.TabIndex = 41;
+            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
             // cbWhite
             // 
@@ -784,6 +793,7 @@
             this.cbWhite.Size = new System.Drawing.Size(18, 17);
             this.cbWhite.TabIndex = 50;
             this.cbWhite.UseVisualStyleBackColor = true;
+            this.cbWhite.CheckedChanged += new System.EventHandler(this.cbWhite_CheckedChanged);
             this.cbWhite.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
             // 
             // cbBrown
@@ -794,6 +804,7 @@
             this.cbBrown.Size = new System.Drawing.Size(18, 17);
             this.cbBrown.TabIndex = 49;
             this.cbBrown.UseVisualStyleBackColor = true;
+            this.cbBrown.CheckedChanged += new System.EventHandler(this.cbBrown_CheckedChanged);
             this.cbBrown.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
             // 
             // cbPurple
@@ -804,6 +815,7 @@
             this.cbPurple.Size = new System.Drawing.Size(18, 17);
             this.cbPurple.TabIndex = 48;
             this.cbPurple.UseVisualStyleBackColor = true;
+            this.cbPurple.CheckedChanged += new System.EventHandler(this.cbPurple_CheckedChanged);
             this.cbPurple.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
             // 
             // label25
@@ -814,6 +826,7 @@
             this.label25.Size = new System.Drawing.Size(43, 16);
             this.label25.TabIndex = 36;
             this.label25.Text = "Trắng";
+            this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
             // cbPink
             // 
@@ -823,6 +836,7 @@
             this.cbPink.Size = new System.Drawing.Size(18, 17);
             this.cbPink.TabIndex = 47;
             this.cbPink.UseVisualStyleBackColor = true;
+            this.cbPink.CheckedChanged += new System.EventHandler(this.cbPink_CheckedChanged);
             this.cbPink.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
             // 
             // bunifuPictureBox9
@@ -841,6 +855,7 @@
             this.bunifuPictureBox9.TabIndex = 35;
             this.bunifuPictureBox9.TabStop = false;
             this.bunifuPictureBox9.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.bunifuPictureBox9.Click += new System.EventHandler(this.bunifuPictureBox9_Click);
             // 
             // cbGray
             // 
@@ -850,6 +865,7 @@
             this.cbGray.Size = new System.Drawing.Size(18, 17);
             this.cbGray.TabIndex = 46;
             this.cbGray.UseVisualStyleBackColor = true;
+            this.cbGray.CheckedChanged += new System.EventHandler(this.cbGray_CheckedChanged);
             this.cbGray.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
             // 
             // label26
@@ -860,6 +876,7 @@
             this.label26.Size = new System.Drawing.Size(32, 16);
             this.label26.TabIndex = 34;
             this.label26.Text = "Nâu";
+            this.label26.Click += new System.EventHandler(this.label26_Click);
             // 
             // cbOrange
             // 
@@ -869,6 +886,7 @@
             this.cbOrange.Size = new System.Drawing.Size(18, 17);
             this.cbOrange.TabIndex = 45;
             this.cbOrange.UseVisualStyleBackColor = true;
+            this.cbOrange.CheckedChanged += new System.EventHandler(this.cbOrange_CheckedChanged);
             this.cbOrange.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
             // 
             // bunifuPictureBox10
@@ -887,6 +905,7 @@
             this.bunifuPictureBox10.TabIndex = 33;
             this.bunifuPictureBox10.TabStop = false;
             this.bunifuPictureBox10.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.bunifuPictureBox10.Click += new System.EventHandler(this.bunifuPictureBox10_Click);
             // 
             // cbYellow
             // 
@@ -896,6 +915,7 @@
             this.cbYellow.Size = new System.Drawing.Size(18, 17);
             this.cbYellow.TabIndex = 44;
             this.cbYellow.UseVisualStyleBackColor = true;
+            this.cbYellow.CheckedChanged += new System.EventHandler(this.cbYellow_CheckedChanged);
             this.cbYellow.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
             // 
             // label27
@@ -906,6 +926,7 @@
             this.label27.Size = new System.Drawing.Size(30, 16);
             this.label27.TabIndex = 32;
             this.label27.Text = "Tím";
+            this.label27.Click += new System.EventHandler(this.label27_Click);
             // 
             // cbRed
             // 
@@ -915,6 +936,7 @@
             this.cbRed.Size = new System.Drawing.Size(18, 17);
             this.cbRed.TabIndex = 43;
             this.cbRed.UseVisualStyleBackColor = true;
+            this.cbRed.CheckedChanged += new System.EventHandler(this.cbRed_CheckedChanged);
             this.cbRed.Click += new System.EventHandler(this.cbBlack_CheckedChanged);
             // 
             // bunifuPictureBox11
@@ -933,6 +955,7 @@
             this.bunifuPictureBox11.TabIndex = 31;
             this.bunifuPictureBox11.TabStop = false;
             this.bunifuPictureBox11.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.bunifuPictureBox11.Click += new System.EventHandler(this.bunifuPictureBox11_Click);
             // 
             // cbBlack
             // 
@@ -953,6 +976,7 @@
             this.label28.Size = new System.Drawing.Size(40, 16);
             this.label28.TabIndex = 30;
             this.label28.Text = "Hồng";
+            this.label28.Click += new System.EventHandler(this.label28_Click);
             // 
             // label18
             // 
@@ -964,6 +988,7 @@
             this.label18.TabIndex = 13;
             this.label18.Text = "Màu sắc";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // bunifuPictureBox12
             // 
@@ -981,6 +1006,7 @@
             this.bunifuPictureBox12.TabIndex = 29;
             this.bunifuPictureBox12.TabStop = false;
             this.bunifuPictureBox12.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.bunifuPictureBox12.Click += new System.EventHandler(this.bunifuPictureBox12_Click);
             // 
             // bunifuPictureBox5
             // 
@@ -999,6 +1025,7 @@
             this.bunifuPictureBox5.TabIndex = 15;
             this.bunifuPictureBox5.TabStop = false;
             this.bunifuPictureBox5.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.bunifuPictureBox5.Click += new System.EventHandler(this.bunifuPictureBox5_Click);
             // 
             // label23
             // 
@@ -1008,6 +1035,7 @@
             this.label23.Size = new System.Drawing.Size(34, 16);
             this.label23.TabIndex = 26;
             this.label23.Text = "Xám";
+            this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
             // bunifuPictureBox4
             // 
@@ -1025,6 +1053,7 @@
             this.bunifuPictureBox4.TabIndex = 1;
             this.bunifuPictureBox4.TabStop = false;
             this.bunifuPictureBox4.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.bunifuPictureBox4.Click += new System.EventHandler(this.bunifuPictureBox4_Click);
             // 
             // bunifuPictureBox7
             // 
@@ -1042,6 +1071,7 @@
             this.bunifuPictureBox7.TabIndex = 25;
             this.bunifuPictureBox7.TabStop = false;
             this.bunifuPictureBox7.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.bunifuPictureBox7.Click += new System.EventHandler(this.bunifuPictureBox7_Click);
             // 
             // label20
             // 
@@ -1051,6 +1081,7 @@
             this.label20.Size = new System.Drawing.Size(31, 16);
             this.label20.TabIndex = 14;
             this.label20.Text = "Đen";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // label24
             // 
@@ -1060,6 +1091,7 @@
             this.label24.Size = new System.Drawing.Size(35, 16);
             this.label24.TabIndex = 24;
             this.label24.Text = "Cam";
+            this.label24.Click += new System.EventHandler(this.label24_Click);
             // 
             // label21
             // 
@@ -1069,6 +1101,7 @@
             this.label21.Size = new System.Drawing.Size(24, 16);
             this.label21.TabIndex = 16;
             this.label21.Text = "Đỏ";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // bunifuPictureBox8
             // 
@@ -1086,6 +1119,7 @@
             this.bunifuPictureBox8.TabIndex = 23;
             this.bunifuPictureBox8.TabStop = false;
             this.bunifuPictureBox8.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.bunifuPictureBox8.Click += new System.EventHandler(this.bunifuPictureBox8_Click);
             // 
             // bunifuPictureBox6
             // 
@@ -1103,6 +1137,7 @@
             this.bunifuPictureBox6.TabIndex = 19;
             this.bunifuPictureBox6.TabStop = false;
             this.bunifuPictureBox6.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.bunifuPictureBox6.Click += new System.EventHandler(this.bunifuPictureBox6_Click);
             // 
             // label22
             // 
@@ -1112,6 +1147,7 @@
             this.label22.Size = new System.Drawing.Size(39, 16);
             this.label22.TabIndex = 20;
             this.label22.Text = "Vàng";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // tabPage3
             // 
@@ -1146,6 +1182,7 @@
             this.flowLayoutCart.Name = "flowLayoutCart";
             this.flowLayoutCart.Size = new System.Drawing.Size(630, 690);
             this.flowLayoutCart.TabIndex = 0;
+            this.flowLayoutCart.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutCart_Paint);
             // 
             // panel5
             // 
@@ -1155,6 +1192,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(629, 70);
             this.panel5.TabIndex = 2;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // label4
             // 
@@ -1165,6 +1203,7 @@
             this.label4.Size = new System.Drawing.Size(178, 23);
             this.label4.TabIndex = 1;
             this.label4.Text = "Sản phẩm nguyên giá";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel4
             // 
@@ -1189,6 +1228,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(415, 404);
             this.panel4.TabIndex = 2;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // lbTotalOrder
             // 
@@ -1200,6 +1240,7 @@
             this.lbTotalOrder.Size = new System.Drawing.Size(121, 19);
             this.lbTotalOrder.TabIndex = 36;
             this.lbTotalOrder.Text = "$Tổng thanh toán";
+            this.lbTotalOrder.Click += new System.EventHandler(this.lbTotalOrder_Click);
             // 
             // lbTransportFee
             // 
@@ -1211,6 +1252,7 @@
             this.lbTransportFee.Size = new System.Drawing.Size(110, 23);
             this.lbTransportFee.TabIndex = 35;
             this.lbTransportFee.Text = "$Vận chuyển";
+            this.lbTransportFee.Click += new System.EventHandler(this.lbTransportFee_Click);
             // 
             // lbDiscount
             // 
@@ -1222,6 +1264,7 @@
             this.lbDiscount.Size = new System.Drawing.Size(91, 23);
             this.lbDiscount.TabIndex = 34;
             this.lbDiscount.Text = "%Discount";
+            this.lbDiscount.Click += new System.EventHandler(this.lbDiscount_Click);
             // 
             // lbTotalMoney
             // 
@@ -1233,6 +1276,7 @@
             this.lbTotalMoney.Size = new System.Drawing.Size(92, 23);
             this.lbTotalMoney.TabIndex = 33;
             this.lbTotalMoney.Text = "$Tổng tiền";
+            this.lbTotalMoney.Click += new System.EventHandler(this.lbTotalMoney_Click);
             // 
             // pBMomo
             // 
@@ -1243,6 +1287,7 @@
             this.pBMomo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBMomo.TabIndex = 32;
             this.pBMomo.TabStop = false;
+            this.pBMomo.Click += new System.EventHandler(this.pBMomo_Click);
             // 
             // btnOrder
             // 
@@ -1254,6 +1299,7 @@
             this.btnOrder.TabIndex = 21;
             this.btnOrder.Text = "Mua hàng";
             this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // pBVNPay
             // 
@@ -1264,6 +1310,7 @@
             this.pBVNPay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBVNPay.TabIndex = 31;
             this.pBVNPay.TabStop = false;
+            this.pBVNPay.Click += new System.EventHandler(this.pBVNPay_Click);
             // 
             // bpMasterCard
             // 
@@ -1274,6 +1321,7 @@
             this.bpMasterCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpMasterCard.TabIndex = 30;
             this.bpMasterCard.TabStop = false;
+            this.bpMasterCard.Click += new System.EventHandler(this.bpMasterCard_Click);
             // 
             // label9
             // 
@@ -1284,6 +1332,7 @@
             this.label9.Size = new System.Drawing.Size(113, 19);
             this.label9.TabIndex = 5;
             this.label9.Text = "Tổng thanh toán";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // pBVisa
             // 
@@ -1294,6 +1343,7 @@
             this.pBVisa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBVisa.TabIndex = 29;
             this.pBVisa.TabStop = false;
+            this.pBVisa.Click += new System.EventHandler(this.pBVisa_Click);
             // 
             // panel6
             // 
@@ -1312,6 +1362,7 @@
             this.pBZalo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBZalo.TabIndex = 28;
             this.pBZalo.TabStop = false;
+            this.pBZalo.Click += new System.EventHandler(this.pBZalo_Click);
             // 
             // label8
             // 
@@ -1323,6 +1374,7 @@
             this.label8.Size = new System.Drawing.Size(101, 23);
             this.label8.TabIndex = 4;
             this.label8.Text = "Vận chuyển";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -1334,6 +1386,7 @@
             this.label7.Size = new System.Drawing.Size(106, 23);
             this.label7.TabIndex = 3;
             this.label7.Text = "Mã giảm giá";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label5
             // 
@@ -1345,6 +1398,7 @@
             this.label5.Size = new System.Drawing.Size(83, 23);
             this.label5.TabIndex = 2;
             this.label5.Text = "Tổng tiền";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -1355,6 +1409,7 @@
             this.label6.Size = new System.Drawing.Size(206, 32);
             this.label6.TabIndex = 2;
             this.label6.Text = "Chi tiết đơn hàng";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // panel3
             // 
@@ -1364,6 +1419,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(629, 70);
             this.panel3.TabIndex = 1;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label3
             // 
@@ -1374,6 +1430,7 @@
             this.label3.Size = new System.Drawing.Size(463, 23);
             this.label3.TabIndex = 1;
             this.label3.Text = "Chúc mừng! Đơn hàng của bạn được Miễn phí vận chuyển";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel2
             // 
@@ -1383,6 +1440,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1082, 70);
             this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label2
             // 

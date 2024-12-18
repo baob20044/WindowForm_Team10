@@ -308,5 +308,295 @@ namespace StoreManagerPro
             ApplyCategoryFilters();  // Apply the filter logic
             LoadFilteredItems();     // Update the UI with filtered items
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutCart_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pBZalo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bpMasterCard_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pBVisa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pBVNPay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pBMomo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbTotalOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbTotalMoney_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbDiscount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbTransportFee_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuPictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuPictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbRed_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbYellow_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuPictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuPictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbOrange_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuPictureBox7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbGray_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbPink_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label28_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuPictureBox12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuPictureBox11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbPurple_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbBrown_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuPictureBox10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuPictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbWhite_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbSizeS_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbSizeM_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbSizeL_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
